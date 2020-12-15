@@ -4203,7 +4203,7 @@ function RT_Feedback_HandRoutineEachFrame(trials) {
     }
     // if (t >= (RT_Feedback_Coin_Hand.getDuration() + RT_Feedback_Coin_Hand.tStart)     && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
     //  RT_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
-    //  RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
+    RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
     // }
     
     // *RT_Rec_Frame_Feedback_Hand* updates
