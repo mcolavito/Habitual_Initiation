@@ -3151,7 +3151,7 @@ function Init_StimRoutineBegin(trials) {
             remap_pair_2.append((i + 4));
         }
     }
-    symb_remap_ind = symb_map_ind;
+    symb_remap_ind = Object.assign({}, symb_map_ind);
     console.log(symb_map_ind)
     symb_remap_ind[remap_pair_1[0]] = symb_map_ind[remap_pair_1[1]];
     symb_remap_ind[remap_pair_1[1]] = symb_map_ind[remap_pair_1[0]];
