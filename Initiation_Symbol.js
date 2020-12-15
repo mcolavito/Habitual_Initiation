@@ -3152,10 +3152,12 @@ function Init_StimRoutineBegin(trials) {
         }
     }
     symb_remap_ind = symb_map_ind;
+    console.log(symb_map_ind)
     symb_remap_ind[remap_pair_1[0]] = symb_map_ind[remap_pair_1[1]];
     symb_remap_ind[remap_pair_1[1]] = symb_map_ind[remap_pair_1[0]];
     symb_remap_ind[remap_pair_2[0]] = symb_map_ind[remap_pair_2[1]];
     symb_remap_ind[remap_pair_2[1]] = symb_map_ind[remap_pair_2[0]];
+    console.log(symb_map_ind)
     for (var i = 0, _pj_a = num_symb; (i < _pj_a); i += 1) {
         symb_map.append(symb[symb_map_ind[i]]);
         symb_remap.append(symb[symb_remap_ind[i]]);
@@ -3164,8 +3166,6 @@ function Init_StimRoutineBegin(trials) {
         symb_r_map.append(symb_r[symb_map_ind[i]]);
         symb_r_remap.append(symb_r[symb_remap_ind[i]]);
     }
-    console.log(symb_map)
-    console.log(symb_remap)
     psychoJS.experiment.addData("symb_map", symb_map_ind);
     psychoJS.experiment.addData("symb_remap", symb_remap_ind);
     psychoJS.experiment.addData("Remap_Pair_1", remap_pair_1);
@@ -5329,8 +5329,6 @@ function Pre_TrialRoutineBegin(trials) {
     Pre_Trial_Rec_Frame.setOpacity(rec_frame_opacity);
     Pre_Trial_Rec_Frame.setLineColor(new util.Color(rec_frame_color));
     Pre_Trial_Rec_Frame.setLineWidth(rec_wd);
-    console.log(symb)
-    console.log(stimnum)
     stimnum_item = seq_stimnum[trial_count];
     key_item = seq_key[trial_count];
     symb_item = seq_symb[trial_count];
