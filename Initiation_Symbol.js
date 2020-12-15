@@ -203,14 +203,15 @@ var num_pos = 4;
 var num_symb = 8;
 var symb_perm = permute(x_symb);
 var n_map = symb_perm.length;
+
 var symb_remap_ind;
 var symb_map_ind;
-var symb_map;
-var symb_remap;
-var symb_g_map;
-var symb_g_remap;
-var symb_r_map;
-var symb_r_remap;
+var symb_map = [];
+var symb_remap = [];
+var symb_g_map = [];
+var symb_g_remap = [];
+var symb_r_map = [];
+var symb_r_remap = [];
 ////////////////////////////////////
 var tr_block_hand = 4;
 var num_trials_hand = 4;
@@ -232,23 +233,25 @@ var tr_old_post_yes = 1;
 var tr_new_yes = 1;
 //////////////////////////////////////
 
-var timing_tol_early;
-var timing_tol_late;
+var timing_tol_early = 0.1;
+var timing_tol_late = 0.075;
+
 var tr_feedback_text;
 var tr_penalty_text;
-var StimList;
-var hand_shape;
-var x;
-var y;
-var symb;
-var symb_g;
-var symb_r;
-var keynum;
-var stimnum;
-var key;
-var prep_time_range;
-var prep_time_ind_tmp;
-var prep_time_ind;
+var StimList = [];
+var hand_shape = [];
+var x = [];
+var y = [];
+var symb = [];
+var symb_g = [];
+var symb_r = [];
+var keynum = [];
+var stimnum = [];
+var key = [];
+
+var prep_time_range = [0, 1.2];
+var prep_time_ind_tmp = [];
+var prep_time_ind = [];
 var count;
 var prep_time_interval;
 var Instr_ExpClock;
@@ -376,15 +379,6 @@ function experimentInit() {
       grp_swap = 1;
   }
   
-  //symb_remap_ind = [];
-  //symb_map_ind = [];
-  //symb_map = [];
-  //symb_remap = [];
-  //symb_g_map = [];
-  //symb_g_remap = [];
-  //symb_r_map = [];
-  //symb_r_remap = [];
-  
   if ((grp_swap === 1)) {
       tr_block_new_swap = 2;
   } else {
@@ -396,25 +390,7 @@ function experimentInit() {
   if ((session === 1)) {
       rt_block = 1;
   }
-  timing_tol_early = 0.1;
-  timing_tol_late = 0.075;
-  tr_feedback_text = [];
-  tr_penalty_text = [];
-  StimList = [];
-  hand_shape = [];
-  x = [];
-  y = [];
-  symb = [];
-  symb_g = [];
-  symb_r = [];
-  keynum = [];
-  stimnum = [];
-  key = [];
-  symb_map = [];
-  symb_remap = [];
-  prep_time_range = [0, 1.2];
-  prep_time_ind_tmp = [];
-  prep_time_ind = [];
+  
   for (var i = 0, _pj_a = 12; (i < _pj_a); i += 1) {
       prep_time_ind_tmp.push(i);
   }
