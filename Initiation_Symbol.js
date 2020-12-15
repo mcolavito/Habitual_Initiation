@@ -360,7 +360,6 @@ function experimentInit() {
   var seed2 = participant + 1; //determine symb-key map
   var myrng = new Math.seedrandom('hello.');   //use new here so it does not affect Math.random()
   console.log(myrng)
-  console.log(participant)
 
   //determine which group participants are in
   grp_list = permute([1, 2, 3, 4]);
