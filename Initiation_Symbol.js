@@ -4604,9 +4604,9 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       TR_Beep_Hand.status = PsychoJS.Status.STARTED;
       
     }
-    if (t >= (TR_Beep_Hand.getDuration() + TR_Beep_Hand.tStart)     && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
+    frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
       TR_Beep_Hand.stop();  // stop the sound (if longer than duration)
-      console.log(TR_Enter_Trials_HandClock.getTime())
       TR_Beep_Hand.status = PsychoJS.Status.FINISHED;
     }
     
@@ -4622,7 +4622,6 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (TR_Rec_Frame_Hand.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       TR_Rec_Frame_Hand.setAutoDraw(false);
-      console.log(t)
     }
     
     // *TR_HandShape* updates
@@ -4721,7 +4720,7 @@ function TR_Enter_Trials_HandRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    TR_Beep_Hand.stop();  // ensure sound has stopped at end of routine
+    //TR_Beep_Hand.stop();  // ensure sound has stopped at end of routine
     sound_vol = 0;
     if ((TR_Press_Hand.keys !== undefined)) {
         if (TR_Press_Hand.corr) {
@@ -6034,8 +6033,9 @@ function TR_Enter_TrialsRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ TR_Beep.play(); });  // screen flip
       TR_Beep.status = PsychoJS.Status.STARTED;
     }
-    if (t >= (TR_Beep.getDuration() + TR_Beep.tStart)     && TR_Beep.status === PsychoJS.Status.STARTED) {
-      TR_Beep.stop();  // stop the sound (if longer than duration)
+    frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && TR_Beep.status === PsychoJS.Status.STARTED) {
+      //TR_Beep.stop();  // stop the sound (if longer than duration)
       TR_Beep.status = PsychoJS.Status.FINISHED;
     }
     
@@ -6134,7 +6134,7 @@ function TR_Enter_TrialsRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    TR_Beep.stop();  // ensure sound has stopped at end of routine
+    //TR_Beep.stop();  // ensure sound has stopped at end of routine
     sound_vol = 0;
     if ((TR_Press.keys !== undefined)) {
         if (TR_Press.corr) {
@@ -7162,8 +7162,10 @@ function TR_Enter_Trials_StopRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ TR_Beep_Stop.play(); });  // screen flip
       TR_Beep_Stop.status = PsychoJS.Status.STARTED;
     }
-    if (t >= (TR_Beep_Stop.getDuration() + TR_Beep_Stop.tStart)     && TR_Beep_Stop.status === PsychoJS.Status.STARTED) {
-      TR_Beep_Stop.stop();  // stop the sound (if longer than duration)
+    
+    frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && TR_Beep_Stop.status === PsychoJS.Status.STARTED) {
+      //TR_Beep_Stop.stop();  // stop the sound (if longer than duration)
       TR_Beep_Stop.status = PsychoJS.Status.FINISHED;
     }
     
@@ -7261,7 +7263,7 @@ function TR_Enter_Trials_StopRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    TR_Beep_Stop.stop();  // ensure sound has stopped at end of routine
+    //TR_Beep_Stop.stop();  // ensure sound has stopped at end of routine
     sound_vol = 0;
     if ((stimnum_item in remap_pair_1) || (stimnum_item in remap_pair_2)) {
         if ((TR_Press_Stop.keys.length === 0)) {
