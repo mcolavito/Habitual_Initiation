@@ -387,8 +387,8 @@ function experimentInit() {
   num_trials = 8;
   rt_block = 12;
   tr_block_old = 2;
-  tr_block_new_swap = 0;
-  tr_block_new_stop = 0;
+  tr_block_new_swap = 6;
+  tr_block_new_stop = 6;
   if ((grp_swap === 1)) {
       tr_block_new_swap = 2;
   } else {
@@ -396,14 +396,14 @@ function experimentInit() {
           tr_block_new_stop = 2;
       }
   }
-  tr_hand_yes = 0;
+  tr_hand_yes = 1;
   rt_hand_yes = 1;
-  cr_old_yes = 0;
-  cr_new_yes = 0;
-  rt_yes = 0;
-  tr_old_pre_yes = 0;
-  tr_old_post_yes = 0;
-  tr_new_yes = 0;
+  cr_old_yes = 1;
+  cr_new_yes = 1;
+  rt_yes = 1;
+  tr_old_pre_yes = 1;
+  tr_old_post_yes = 1;
+  tr_new_yes = 1;
   if ((session === 1)) {
       rt_block = 1;
   }
