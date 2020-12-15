@@ -3152,12 +3152,13 @@ function Init_StimRoutineBegin(trials) {
         }
     }
     symb_remap_ind = Object.assign({}, symb_map_ind);
-    console.log(symb_map_ind)
+    
     symb_remap_ind[remap_pair_1[0]] = symb_map_ind[remap_pair_1[1]];
     symb_remap_ind[remap_pair_1[1]] = symb_map_ind[remap_pair_1[0]];
     symb_remap_ind[remap_pair_2[0]] = symb_map_ind[remap_pair_2[1]];
     symb_remap_ind[remap_pair_2[1]] = symb_map_ind[remap_pair_2[0]];
     console.log(symb_map_ind)
+    console.log(symb_remap_ind)
     for (var i = 0, _pj_a = num_symb; (i < _pj_a); i += 1) {
         symb_map.append(symb[symb_map_ind[i]]);
         symb_remap.append(symb[symb_remap_ind[i]]);
