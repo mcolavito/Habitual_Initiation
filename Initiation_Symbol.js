@@ -4200,7 +4200,7 @@ function RT_Feedback_HandRoutineEachFrame(trials) {
       RT_Feedback_Coin_Hand.status = PsychoJS.Status.STARTED;
     }
     if (t >= (RT_Feedback_Coin_Hand.getDuration() + RT_Feedback_Coin_Hand.tStart)     && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
-      RT_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
+    //  RT_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
       RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
     }
     
@@ -4280,7 +4280,7 @@ function RT_Feedback_HandRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    RT_Feedback_Coin_Hand.stop();  // ensure sound has stopped at end of routine
+   // RT_Feedback_Coin_Hand.stop();  // ensure sound has stopped at end of routine
     // the Routine "RT_Feedback_Hand" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
