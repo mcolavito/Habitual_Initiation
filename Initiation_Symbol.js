@@ -3241,22 +3241,22 @@ Ready? Press one of these keys to continue.`
     
 Now, you need to press the corresponding finger when the larger white ring intersects the smaller grey ring. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers when two rings intersect.
     
-Let’s practice! Press one of the keys to continue.`
+Let’s practice! Press one of the keys (H, U, I, L) to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
-You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, or L). Your job is to figure out which symbol corresponds with which key.
+You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
 
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
-Ready? Press one of the keys to continue.`
+Ready? Press one of the keys (H, U, I, L) to continue.`
     ;
     if ((session === 1)) {
         instr_rt_text = `Now using the maps that you just learned, your job is to press the corresponding key as quickly and as accurately as possible.
     
 There will be ${rt_block} blocks with short breaks in between.
     
-Whenever you are ready, press one of the keys to start.`
+Whenever you are ready, press one of the keys (H, U, I, L) to start.`
     ;
     } else {
         if ((1 < session)) {
@@ -3264,7 +3264,7 @@ Whenever you are ready, press one of the keys to start.`
     
 Remember, your job is to press the corresponding key as quickly and accurately as you can.
     
-Whenever you are ready, press one of the keys to start.`
+Whenever you are ready, press one of the keys (H, U, I, L) to start.`
     ;
         }
     }
@@ -3272,13 +3272,13 @@ Whenever you are ready, press one of the keys to start.`
     
 In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-Press one of the keys to start.`
+Press one of the keys (H, U, I, L) to start.`
     ;
     instr_tr_old_post_text = `Good job so far.
     
 In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-Press one of the keys to start.`
+Press one of the keys (H, U, I, L) to start.`
     ;
     if ((grp_stop === 1)) {
         instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
@@ -3332,11 +3332,11 @@ Press one of you finger to start the block.`
     }
     penalty_toolate_text = `Response was too late.
 2 second penalty.
-After 2 second, press one of the keys to continue.`
+After 2 second, press one of the keys (H, U, I, L) to continue.`
     ;
     penalty_tooearly_text = `Response was too early.
 2 second penalty.
-After 2 second, press one of the keys to continue.`
+After 2 second, press one of the keys (H, U, I, L) to continue.`
     ;
     feedback_early_text = `little early`;
     feedback_late_text = `little late`;
