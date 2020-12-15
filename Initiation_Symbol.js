@@ -3164,6 +3164,8 @@ function Init_StimRoutineBegin(trials) {
         symb_r_map.append(symb_r[symb_map_ind[i]]);
         symb_r_remap.append(symb_r[symb_remap_ind[i]]);
     }
+    console.log(symb_map)
+    console.log(symb_remap)
     psychoJS.experiment.addData("symb_map", symb_map_ind);
     psychoJS.experiment.addData("symb_remap", symb_remap_ind);
     psychoJS.experiment.addData("Remap_Pair_1", remap_pair_1);
