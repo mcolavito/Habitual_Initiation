@@ -126,6 +126,7 @@ psychoJS.start({
 
 // Array.prototype.append = [].push
 
+// permutation of arrays
 function permute(permutation) {
   var length = permutation.length,
       result = [permutation.slice()],
@@ -210,7 +211,6 @@ var symb_g_map;
 var symb_g_remap;
 var symb_r_map;
 var symb_r_remap;
-var rt_block_hand;
 var tr_block_hand;
 var num_trials_hand;
 var num_trials_cr;
@@ -346,9 +346,13 @@ function experimentInit() {
   // Initialize components for Routine "Init_Stim"
   Init_StimClock = new util.Clock();
   
-  block_type = [];
   participant = Number.parseInt(expInfo["participant"]);
   session = Number.parseInt(expInfo["session"]);
+
+  var myrng = new Math.seedrandom(participant);
+  console.log(myrng.int32)
+  
+  //determine which group participants are in
   grp_list = permute([1, 2, 3, 4]);
   grp_list_num = grp_list.length;
   if ((participant == null)) {
