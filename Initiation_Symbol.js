@@ -176,12 +176,8 @@ var Init_StimClock;
 var block_type;
 var participant;
 var session;
-var grp_list;
-var grp_list_num;
-var tmp_grp_rnd;
-var tmp_grp;
-var grp_stop;
-var grp_swap;
+var grp_stop = 0;
+var grp_swap = 0;
 var beep_lead_in = 0.1;
 var color_p = [(- 1), 1, (- 1)];
 var color_n = [1, (- 1), (- 1)];
@@ -358,33 +354,17 @@ function experimentInit() {
 
   var seed1 = participant; // determine group
   var seed2 = participant + 1; //determine symb-key map
-  var myrng = new Math.seedrandom(seed1);   //use new here so it does not affect Math.random()
-  console.log(myrng())
-  console.log(myrng.int32());
-
+  var seed3 = participant + 2; // determine remap pair
+  var myrng1 = new Math.seedrandom(seed1);   //use new here so it does not affect Math.random()
+  var myrng2 = new Math.seedrandom(seed2);
+  var myrgn3 = new Math.seedrandom(seed3);
   //determine which group participants are in
-  grp_list = permute([1, 2, 3, 4]);
-  grp_list_num = grp_list.length;
-  if ((participant == null)) {
-      tmp_grp_rnd = 0;
-  } else {
-      tmp_grp_rnd = ((participant * 2) % grp_list_num);
-  }
-  tmp_grp = grp_list[tmp_grp_rnd];
-  grp_stop = 0;
-  grp_swap = 0;
-  if (((tmp_grp[0] % 2) === 0)) {
+  if ((myrng1() < 0.5)) {
       grp_stop = 1;
+      tr_block_new_stop = 2;
   } else {
       grp_swap = 1;
-  }
-  
-  if ((grp_swap === 1)) {
       tr_block_new_swap = 2;
-  } else {
-      if ((grp_stop === 1)) {
-          tr_block_new_stop = 2;
-      }
   }
   
   if ((session === 1)) {
@@ -3061,6 +3041,7 @@ function Import_Stim_FileRoutineEnd(trials) {
 var coin;
 var beep;
 var symb_map_rnd;
+var remap_pair_rnd;
 var remap_pair_1 = [];
 var remap_pair_2 = [];
 var Init_StimComponents;
@@ -3087,14 +3068,11 @@ function Init_StimRoutineBegin(trials) {
         y.push(StimList[i]["Y_pos"]);
     }
 
-    if ((participant == null)) {
-        symb_map_rnd = 0;
-    } else {
-        symb_map_rnd = (((participant * participant) + participant) % n_map);
-    }
+    symb_map_rnd = Math.floor(myrng2() * num_symb) // random interger between 0 and num_symb - 1
     symb_map_ind = symb_perm[symb_map_rnd];
     
-    remap_pair_1 = remap_pairs[(participant % n_map)];
+    remap_pair_rnd = Math.floor(myrng3() * remap_pairs.length)
+    remap_pair_1 = remap_pairs[remap_pair_rnd];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(remap_pair_1.includes(i))) {
             remap_pair_2.push((i + 4));
