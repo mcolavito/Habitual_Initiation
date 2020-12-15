@@ -4605,8 +4605,8 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       
     }
     if (t >= (TR_Beep_Hand.getDuration() + TR_Beep_Hand.tStart)     && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
-      console.log(TR_Enter_Trials_HandClock.getTime())
       TR_Beep_Hand.stop();  // stop the sound (if longer than duration)
+      console.log(TR_Enter_Trials_HandClock.getTime())
       TR_Beep_Hand.status = PsychoJS.Status.FINISHED;
     }
     
@@ -4622,6 +4622,7 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (TR_Rec_Frame_Hand.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       TR_Rec_Frame_Hand.setAutoDraw(false);
+      console.log(t)
     }
     
     // *TR_HandShape* updates
