@@ -107,6 +107,8 @@ psychoJS.start({
     {'name': 'media/djnb_g.png', 'path': './media/djnb_g.png'},
     {'name': 'media/djnb_r.png', 'path': './media/djnb_r.png'},
     {'name': 'media/ddnb.png', 'path': './media/ddnb.png'},
+    {'name': 'media/ddnb_g.png', 'path': './media/ddnb_g.png'},
+    {'name': 'media/ddnb_r.png', 'path': './media/ddnb_r.png'},
     {'name': 'media/dfnb.png', 'path': './media/dfnb.png'},
     {'name': 'media/dfnb_g.png', 'path': './media/dfnb_g.png'},
     {'name': 'media/dfnb_r.png', 'path': './media/dfnb_r.png'},
