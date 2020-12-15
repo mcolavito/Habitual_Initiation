@@ -415,8 +415,6 @@ function experimentInit() {
   hand_shape = [];
   x = [];
   y = [];
-  finger_hand = [];
-  stim = [];
   symb = [];
   symb_g = [];
   symb_r = [];
