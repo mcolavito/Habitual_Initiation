@@ -4160,7 +4160,7 @@ function RT_Feedback_HandRoutineBegin(trials) {
     value: coin,
     secs: -1,
     });
-    RT_Feedback_Coin_Hand.getDuration()
+    console.log(RT_Feedback_Coin_Hand.getDuration())
     RT_Feedback_Coin_Hand.setVolume(sound_vol);
     RT_Rec_Frame_Feedback_Hand.setOpacity(rec_frame_opacity);
     RT_Rec_Frame_Feedback_Hand.setLineColor(new util.Color(rec_frame_color));
@@ -4557,7 +4557,7 @@ function TR_Enter_Trials_HandRoutineBegin(trials) {
     value: beep,
     secs: -1,
     });
-    TR_Beep_Hand.getDuration()
+    console.log(TR_Beep_Hand.getDuration())
     TR_Beep_Hand.setVolume(1);
     routineTimer.reset(time_limit);
     tr_press_early = 0;
