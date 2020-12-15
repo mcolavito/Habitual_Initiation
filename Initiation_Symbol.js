@@ -195,7 +195,6 @@ var too_late_tol;
 var stop_tol;
 var key_list;
 var x_symb;
-var x8;
 var x8_new;
 var x16;
 var remap_pairs;
@@ -379,7 +378,6 @@ function experimentInit() {
   stop_tol = 2;
   key_list = ["h", "u", "i", "l"];
   x_symb = [0, 1, 2, 3, 4, 5, 6, 7];
-  x8 = [0, 1, 2, 3, 0, 1, 2, 3];
   x8_new = x_symb;
   x16 = x8_new.concat(x8_new);
   remap_pairs = [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]];
@@ -3694,8 +3692,8 @@ function Creat_StimSeqRoutineBegin(trials) {
                 seq_symb_r.append(symb_r[i]);
                 seq_keynum.append(keynum[i]);
             }
-            util.shuffle(x8);
-            for (var i, _pj_c = 0, _pj_a = x8, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
+            util.shuffle(x8_new);
+            for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
                 seq_stimnum.append(stimnum[i]);
                 seq_key.append(key[i]);
@@ -3730,8 +3728,8 @@ function Creat_StimSeqRoutineBegin(trials) {
                 seq_symb_r.append(symb_r[i]);
                 seq_keynum.append(keynum[i]);
             }
-            util.shuffle(x8);
-            for (var i, _pj_c = 0, _pj_a = x8, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
+            util.shuffle(x8_new);
+            for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
                 seq_stimnum.append(stimnum[i]);
                 seq_key.append(key[i]);
