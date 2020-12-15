@@ -124,7 +124,7 @@ psychoJS.start({
   ]
   });
 
-Array.prototype.append = [].push
+// Array.prototype.append = [].push
 
 function permute(permutation) {
   var length = permutation.length,
@@ -441,12 +441,12 @@ function experimentInit() {
   prep_time_ind_tmp = [];
   prep_time_ind = [];
   for (var i = 0, _pj_a = 12; (i < _pj_a); i += 1) {
-      prep_time_ind_tmp.append(i);
+      prep_time_ind_tmp.push(i);
   }
   count = 0;
   while ((count < num_symb)) {
       util.shuffle(prep_time_ind_tmp);
-      prep_time_ind.append(prep_time_ind_tmp.slice(0));
+      prep_time_ind.push(prep_time_ind_tmp.slice(0));
       count = (count + 1);
   }
   prep_time_interval = [[prep_time_range[0], 0.1], [0.1, 0.2], [0.2, 0.3], [0.3, 0.4], [0.4, 0.5], [0.5, 0.6], [0.6, 0.7], [0.7, 0.8], [0.8, 0.9], [0.9, 1], [1, 1.1], [1.1, prep_time_range[1]]];
@@ -3126,14 +3126,14 @@ function Init_StimRoutineBegin(trials) {
     coin = StimList[0]["Sound_P"];
     beep = StimList[0]["Beep"];
     for (var i = 0, _pj_a = num_symb; (i < _pj_a); i += 1) {
-        stimnum.append(StimList[i]["StimNum"]);
-        symb.append(StimList[i]["Symb"]);
-        symb_r.append(StimList[i]["Symb_R"]);
-        symb_g.append(StimList[i]["Symb_G"]);
-        key.append(StimList[i]["Key"]);
-        keynum.append(StimList[i]["KeyNum"]);
-        x.append(StimList[i]["X_pos"]);
-        y.append(StimList[i]["Y_pos"]);
+        stimnum.push(StimList[i]["StimNum"]);
+        symb.push(StimList[i]["Symb"]);
+        symb_r.push(StimList[i]["Symb_R"]);
+        symb_g.push(StimList[i]["Symb_G"]);
+        key.push(StimList[i]["Key"]);
+        keynum.push(StimList[i]["KeyNum"]);
+        x.push(StimList[i]["X_pos"]);
+        y.push(StimList[i]["Y_pos"]);
     }
 
     if ((participant == null)) {
@@ -3147,7 +3147,7 @@ function Init_StimRoutineBegin(trials) {
     remap_pair_1 = remap_pairs[(participant % n_map)];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(remap_pair_1.includes(i))) {
-            remap_pair_2.append((i + 4));
+            remap_pair_2.push((i + 4));
         }
     }
     symb_remap_ind = Object.assign({}, symb_map_ind);
@@ -3158,12 +3158,12 @@ function Init_StimRoutineBegin(trials) {
     symb_remap_ind[remap_pair_2[1]] = symb_map_ind[remap_pair_2[0]];
 
     for (var i = 0, _pj_a = num_symb; (i < _pj_a); i += 1) {
-        symb_map.append(symb[symb_map_ind[i]]);
-        symb_remap.append(symb[symb_remap_ind[i]]);
-        symb_g_map.append(symb_g[symb_map_ind[i]]);
-        symb_g_remap.append(symb_g[symb_remap_ind[i]]);
-        symb_r_map.append(symb_r[symb_map_ind[i]]);
-        symb_r_remap.append(symb_r[symb_remap_ind[i]]);
+        symb_map.push(symb[symb_map_ind[i]]);
+        symb_remap.push(symb[symb_remap_ind[i]]);
+        symb_g_map.push(symb_g[symb_map_ind[i]]);
+        symb_g_remap.push(symb_g[symb_remap_ind[i]]);
+        symb_r_map.push(symb_r[symb_map_ind[i]]);
+        symb_r_remap.push(symb_r[symb_remap_ind[i]]);
     }
     psychoJS.experiment.addData("symb_map", symb_map_ind);
     psychoJS.experiment.addData("symb_remap", symb_remap_ind);
@@ -3663,11 +3663,11 @@ function Creat_StimSeqRoutineBegin(trials) {
             util.shuffle(x8_new);
             for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_handx.append(x[i]);
-                seq_handy.append(y[i]);
-                seq_key_hand.append(key[i]);
-                seq_keynum_hand.append(keynum[i]);
-                seq_stimnum_hand.append(stimnum[i]);
+                seq_handx.push(x[i]);
+                seq_handy.push(y[i]);
+                seq_key_hand.push(key[i]);
+                seq_keynum_hand.push(keynum[i]);
+                seq_stimnum_hand.push(stimnum[i]);
             }
             count = (count + 1);
         }
@@ -3678,32 +3678,32 @@ function Creat_StimSeqRoutineBegin(trials) {
             util.shuffle(x16);
             for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             util.shuffle(x16);
             for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             util.shuffle(x8_new);
             for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             count = (count + 1);
         }
@@ -3715,32 +3715,32 @@ function Creat_StimSeqRoutineBegin(trials) {
             util.shuffle(x16);
             for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             util.shuffle(x16);
             for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             util.shuffle(x8_new);
             for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
-                seq_stimnum.append(stimnum[i]);
-                seq_key.append(key[i]);
-                seq_symb.append(symb[i]);
-                seq_symb_g.append(symb_g[i]);
-                seq_symb_r.append(symb_r[i]);
-                seq_keynum.append(keynum[i]);
+                seq_stimnum.push(stimnum[i]);
+                seq_key.push(key[i]);
+                seq_symb.push(symb[i]);
+                seq_symb_g.push(symb_g[i]);
+                seq_symb_r.push(symb_r[i]);
+                seq_keynum.push(keynum[i]);
             }
             count = (count + 1);
         }
