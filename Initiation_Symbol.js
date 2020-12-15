@@ -3303,7 +3303,9 @@ There will be four symbols showing on the screen, one at a time. Each of them ma
     
 Your job is to figure out the map.
     
-Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
+Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.
+    
+Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
@@ -3313,7 +3315,9 @@ There will be four symbols showing on the screen, one at a time. Each of them ma
     
 Your job is to figure out the map.
     
-Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
+Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.
+
+Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
         }
     }
