@@ -3137,6 +3137,9 @@ function Init_StimRoutineBegin(trials) {
         x.append(StimList[i]["X_pos"]);
         y.append(StimList[i]["Y_pos"]);
     }
+
+    console.log(symb)
+    console.log(stimnum)
     if ((participant == null)) {
         symb_map_rnd = 0;
     } else {
@@ -3255,7 +3258,7 @@ Ready? Press one of (H, U, I, L) to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
-Now, you need to press the corresponding finger when the larger white ring intersects the smaller grey ring. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers when two rings intersect.
+In the following practice, you will hear four beeps every time. Your job is to press the corresponding finger synchronizing with the fourth beep. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
     
 Let’s practice! Press one of (H, U, I, L) to continue.`
     ;
@@ -3268,7 +3271,7 @@ ACCURACY is the priority, so go as slowly as you need to. The more mistakes you 
 Ready? Press one of (H, U, I, L) to continue.`
     ;
     if ((session === 1)) {
-        instr_rt_text = `Now using the maps that you just learned, your job is to press the corresponding key as quickly and as accurately as possible.
+        instr_rt_text = `Now you are going to practice the symbol-key map you learned. Your job is to press the corresponding key as quickly and as accurately as possible.
     
 There will be ${rt_block} blocks with short breaks in between.
     
@@ -3286,13 +3289,13 @@ Whenever you are ready, press one of (H, U, I, L) to start.`
     }
     instr_tr_old_pre_text = `Good job so far.
     
-In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 2 blocks, use the symbol-key map you learned and press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
 Press one of (H, U, I, L) to start.`
     ;
     instr_tr_old_post_text = `Good job so far.
     
-In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 2 blocks, you will hear four beeps again. Press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
 Press one of (H, U, I, L) to start.`
     ;
@@ -3348,7 +3351,7 @@ Press one of you finger to start the block.`
     }
     penalty_toolate_text = `Response was too late.
 2 second penalty.
-After 2 second penalty, press one of (H, U, I, L) to continue.`
+After 2 second, press one of (H, U, I, L) to continue.`
     ;
     penalty_tooearly_text = `Response was too early.
 2 second penalty.
