@@ -3246,6 +3246,7 @@ Let’s practice! Press one of the keys to continue.`
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
 You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, or L). Your job is to figure out which symbol corresponds with which key.
+
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
 Ready? Press one of the keys to continue.`
@@ -3602,6 +3603,7 @@ var sum_corr;
 var seq_stimnum_hand;
 var seq_stimnum;
 var seq_keynum;
+var seq_key;
 var seq_symb;
 var seq_symb_g;
 var seq_symb_r;
