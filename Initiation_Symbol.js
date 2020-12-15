@@ -3145,9 +3145,8 @@ function Init_StimRoutineBegin(trials) {
     remap_pair_1 = [];
     remap_pair_2 = [];
     remap_pair_1 = remap_pairs[(participant % n_map)];
-    for (var i, _pj_c = 0, _pj_a = x_symb, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
-        i = _pj_a[_pj_c];
-        if  (!(i in remap_pair_1) && i < 4) {
+    for (i = 0, _pj_a = 8; (i < _pj_a); i += 1) {
+        if  (!(i in remap_pair_1)) {
             remap_pair_2.append((i + 4));
         }
     }
