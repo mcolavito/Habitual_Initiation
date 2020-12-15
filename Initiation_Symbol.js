@@ -245,6 +245,10 @@ var keynum = [];
 var stimnum = [];
 var key = [];
 
+var rng1
+var rng2
+var rng3
+
 var prep_time_range = [0, 1.2];
 var prep_time_ind_tmp = [];
 var prep_time_ind = [];
@@ -352,11 +356,10 @@ function experimentInit() {
   participant = Number.parseInt(expInfo["participant"]);
   session = Number.parseInt(expInfo["session"]);
 
-  var seed = participant; // determine group
-  var myrng = new Math.seedrandom(seed);   //use new here so it does not affect Math.random()
-  var rng1 = myrng()
-  var rng2 = myrng()
-  var rng3 = myrng()
+  var myrng = new Math.seedrandom(participant);   //use new here so it does not affect Math.random()
+  rng1 = myrng()
+  rng2 = myrng()
+  rng3 = myrng()
   console.log(rng1)
   console.log(rng2)
   console.log(rng3)
