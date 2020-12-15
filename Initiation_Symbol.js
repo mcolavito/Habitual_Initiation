@@ -352,14 +352,14 @@ function experimentInit() {
   participant = Number.parseInt(expInfo["participant"]);
   session = Number.parseInt(expInfo["session"]);
 
-  var seed1 = participant; // determine group
-  var seed2 = participant + 1; //determine symb-key map
-  var seed3 = participant + 2; // determine remap pair
-  var myrng1 = new Math.seedrandom(seed1);   //use new here so it does not affect Math.random()
-  var myrng2 = new Math.seedrandom(seed2);
-  var myrgn3 = new Math.seedrandom(seed3);
+  var seed = participant; // determine group
+  var myrng = new Math.seedrandom(seed);   //use new here so it does not affect Math.random()
+  console.log(myrng())
+  console.log(myrng())
+  console.log(myrng())
+  
   //determine which group participants are in
-  if ((myrng1() < 0.5)) {
+  if ((myrng() < 0.5)) {
       grp_stop = 1;
       tr_block_new_stop = 2;
   } else {
@@ -3068,10 +3068,10 @@ function Init_StimRoutineBegin(trials) {
         y.push(StimList[i]["Y_pos"]);
     }
 
-    symb_map_rnd = Math.floor(myrng2() * num_symb) // random interger between 0 and num_symb - 1
+    symb_map_rnd = Math.floor(myrng() * num_symb) // random interger between 0 and num_symb - 1
     symb_map_ind = symb_perm[symb_map_rnd];
     
-    remap_pair_rnd = Math.floor(myrng3() * remap_pairs.length)
+    remap_pair_rnd = Math.floor(myrng() * remap_pairs.length)
     remap_pair_1 = remap_pairs[remap_pair_rnd];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(remap_pair_1.includes(i))) {
@@ -3108,7 +3108,6 @@ function Init_StimRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function Init_StimRoutineEachFrame(trials) {
   return function () {
