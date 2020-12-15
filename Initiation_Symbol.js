@@ -3136,8 +3136,6 @@ function Init_StimRoutineBegin(trials) {
         y.append(StimList[i]["Y_pos"]);
     }
 
-    console.log(symb)
-    console.log(stimnum)
     if ((participant == null)) {
         symb_map_rnd = 0;
     } else {
@@ -5330,6 +5328,8 @@ function Pre_TrialRoutineBegin(trials) {
     Pre_Trial_Rec_Frame.setOpacity(rec_frame_opacity);
     Pre_Trial_Rec_Frame.setLineColor(new util.Color(rec_frame_color));
     Pre_Trial_Rec_Frame.setLineWidth(rec_wd);
+    console.log(symb)
+    console.log(stimnum)
     stimnum_item = seq_stimnum[trial_count];
     key_item = seq_key[trial_count];
     symb_item = seq_symb[trial_count];
@@ -5357,7 +5357,6 @@ function Pre_TrialRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function Pre_TrialRoutineEachFrame(trials) {
   return function () {
