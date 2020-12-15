@@ -3705,8 +3705,7 @@ function Creat_StimSeqRoutineBegin(trials) {
             count = (count + 1);
         }
     }
-    console.log(seq_stimnum)
-    console.log(seq_symb)
+    
     if (((block_type !== "CR") && (stim_type === "Symb"))) {
         count = 0;
         while ((count < (num_trials / 40))) {
