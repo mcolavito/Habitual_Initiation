@@ -709,7 +709,7 @@ function experimentInit() {
   TR_Penalty_Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'TR_Penalty_Text',
-    alignText: 'center',
+    alignHoriz: 'center',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -926,7 +926,7 @@ function experimentInit() {
   TR_Penalty_Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'TR_Penalty_Text',
-    alignText: 'center',
+    alignHoriz: 'center',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -1155,7 +1155,7 @@ function experimentInit() {
   TR_Penalty_Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'TR_Penalty_Text',
-    alignText: 'center',
+    alignHoriz: 'center',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -1431,7 +1431,7 @@ function experimentInit() {
   TR_Penalty_Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'TR_Penalty_Text',
-    alignText: 'center',
+    alignHoriz: 'center',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -1551,7 +1551,7 @@ function experimentInit() {
   TR_Penalty_Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'TR_Penalty_Text',
-    alignText: 'center',
+    alignHoriz: 'center',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -3093,7 +3093,6 @@ function Import_Stim_FileRoutineEnd(trials) {
 }
 
 
-var _pj;
 var coin;
 var beep;
 var symb_map_rnd;
@@ -3226,120 +3225,120 @@ function Init_StimRoutineEnd(trials) {
     }
     instr_exp_text = `Thank you for participating in our study!
     
-    This study has multiple sessions and it will take 40 minutes today. Once you start, you cannot turn off your web browser until you complete the study.
+This study has multiple sessions and it will take 40 minutes today. Once you start, you cannot turn off your web browser until you complete the study.
     
-    If you are ready, press (space) to continue.`
+If you are ready, press (space) to continue.`
     ;
     instr_rt_text_hand = `The upcoming three blocks are used to be familiar with the task.
     
-    With your Right hand, place your Index, Middle, Ring, and Pinky fingers on (H, U, I, L) respectively. Your fingers will rest on these keys for the entirety of the experiment.
+With your Right hand, place your Index, Middle, Ring, and Pinky fingers on (H, U, I, L) respectively. Your fingers will rest on these keys for the entirety of the experiment.
     
-    You will see a hand appear on the screen. One of the fingers on the screen will light up and your job is to press the corresponding finger as quickly and as accurately as possible.
+You will see a hand appear on the screen. One of the fingers on the screen will light up and your job is to press the corresponding finger as quickly and as accurately as possible.
     
-    Ready? Press one of these keys to continue.`
+Ready? Press one of these keys to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
-    Now, you need to press the corresponding finger when the larger white ring intersects the smaller grey ring. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers when two rings intersect.
+Now, you need to press the corresponding finger when the larger white ring intersects the smaller grey ring. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers when two rings intersect.
     
-    Let’s practice! Press one of the keys to continue.`
+Let’s practice! Press one of the keys to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
-    You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, or L). Your job is to figure out which symbol corresponds with which key.
-    ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
+You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, or L). Your job is to figure out which symbol corresponds with which key.
+ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
-    Ready? Press one of the keys to continue.`
+Ready? Press one of the keys to continue.`
     ;
     if ((session === 1)) {
         instr_rt_text = `Now using the maps that you just learned, your job is to press the corresponding key as quickly and as accurately as possible.
     
-    There will be ${rt_block} blocks with short breaks in between.
+There will be ${rt_block} blocks with short breaks in between.
     
-    Whenever you are ready, press one of the keys to start.`
+Whenever you are ready, press one of the keys to start.`
     ;
     } else {
         if ((1 < session)) {
             instr_rt_text = `Today, we first continue to practice the symbol-key maps for ${rt_block} blocks.
     
-    Remember, your job is to press the corresponding key as quickly and accurately as you can.
+Remember, your job is to press the corresponding key as quickly and accurately as you can.
     
-    Whenever you are ready, press one of the keys to start.`
+Whenever you are ready, press one of the keys to start.`
     ;
         }
     }
     instr_tr_old_pre_text = `Good job so far.
     
-    In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-    Press one of the keys to start.`
+Press one of the keys to start.`
     ;
     instr_tr_old_post_text = `Good job so far.
     
-    In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-    Press one of the keys to start.`
+Press one of the keys to start.`
     ;
     if ((grp_stop === 1)) {
         instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
     
-    There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
+There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
     
-    Your job is to figure out the map.
+Your job is to figure out the map.
     
-    Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
+Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
     ;
     } else {
         if ((grp_swap === 1)) {
             instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
     
-    There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
+There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
     
-    Your job is to figure out the map.
+Your job is to figure out the map.
     
-    Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
+Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.`
     ;
         }
     }
     if ((grp_stop === 1)) {
         instr_tr_new_text = `In the following set of blocks, still use the symbol-key map you practiced previously.
     
-    Press the corresponding key when the moving ring overlaps the while circle.
+Press the corresponding key when the moving ring overlaps the while circle.
     
-    Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
+Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
     
-    This task is designed to be very hard, so it is ok to make a guess.
+This task is designed to be very hard, so it is ok to make a guess.
     
-    There will be five blocks in total.
+There will be five blocks in total.
     
-    Press one of you finger to start the block.`
+Press one of you finger to start the block.`
     ;
     } else {
         if ((grp_swap === 1)) {
             instr_tr_new_text = `In the following set of blocks, still use the symbol-key map you practiced previously.
     
-    Press the corresponding key when the moving ring overlaps the while circle.
+Press the corresponding key when the moving ring overlaps the while circle.
     
-    Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
+Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
     
-    This task is designed to be very hard, so it is ok to make a guess.
+This task is designed to be very hard, so it is ok to make a guess.
     
-    There will be five blocks in total.
+There will be five blocks in total.
     
-    Press one of you finger to start the block.`
+Press one of you finger to start the block.`
     ;
         }
     }
     penalty_toolate_text = `Response was too late.
-    2 second penalty.
-    After 2 second, press one of the keys to continue.`
+2 second penalty.
+After 2 second, press one of the keys to continue.`
     ;
     penalty_tooearly_text = `Response was too early.
-    2 second penalty.
-    After 2 second, press one of the keys to continue.`
+2 second penalty.
+After 2 second, press one of the keys to continue.`
     ;
-    feedback_early_text = `too fast`;
-    feedback_late_text = `too slow`;
+    feedback_early_text = `little early`;
+    feedback_late_text = `little late`;
     feedback_good_text = `good timing`;
     
     // the Routine "Init_Stim" was not non-slip safe, so reset the non-slip timer
@@ -4092,7 +4091,7 @@ function RT_Enter_Trial_HandRoutineEnd(trials) {
     }
     actual_press = RT_Press_Hand.keys;
     rt = RT_Press_Hand.rt;
-    actual_choice = key_list.index(actual_press);
+    actual_choice = key_list.indexOf(actual_press);
     psychoJS.experiment.addData("actual_press", actual_press);
     psychoJS.experiment.addData("rt", rt);
     psychoJS.experiment.addData("actual_choice", actual_choice);
@@ -4757,7 +4756,7 @@ function TR_Enter_Trials_HandRoutineEnd(trials) {
     if ((TR_Press_Hand.keys !== undefined)) {
         actual_press = TR_Press_Hand.keys;
         rt = TR_Press_Hand.rt;
-        actual_choice = key_list.index(actual_press);
+        actual_choice = key_list.indexOf(actual_press);
     } else {
         actual_press = "a";
         rt = 99;
@@ -5561,7 +5560,7 @@ function RT_Enter_TrialRoutineEnd(trials) {
     }
     actual_press = RT_Press.keys;
     rt = RT_Press.rt;
-    actual_choice = key_list.index(actual_press);
+    actual_choice = key_list.indexOf(actual_press);
     psychoJS.experiment.addData("actual_press", actual_press);
     psychoJS.experiment.addData("rt", rt);
     psychoJS.experiment.addData("actual_choice", actual_choice);
@@ -6168,7 +6167,7 @@ function TR_Enter_TrialsRoutineEnd(trials) {
     if ((TR_Press.keys !== undefined)) {
         actual_press = TR_Press.keys;
         rt = TR_Press.rt;
-        actual_choice = key_list.index(actual_press);
+        actual_choice = key_list.indexOf(actual_press);
     } else {
         actual_press = "a";
         rt = 99;
@@ -6901,7 +6900,7 @@ function RT_Enter_Trial_StopRoutineEnd(trials) {
     if ((RT_Press_Stop.keys !== undefined)) {
         actual_press = RT_Press_Stop.keys;
         rt = RT_Press_Stop.rt;
-        actual_choice = key_list.index(actual_press);
+        actual_choice = key_list.indexOf(actual_press);
     } else {
         actual_press = "a";
         rt = 99;
@@ -7334,7 +7333,7 @@ function TR_Enter_Trials_StopRoutineEnd(trials) {
     if ((TR_Press_Stop.keys !== undefined)) {
         actual_press = TR_Press_Stop.keys;
         rt = TR_Press_Stop.rt;
-        actual_choice = key_list.index(actual_press);
+        actual_choice = key_list.indexOf(actual_press);
     } else {
         actual_press = "a";
         rt = 99;
