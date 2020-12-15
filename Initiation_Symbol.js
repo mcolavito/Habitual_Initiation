@@ -182,27 +182,27 @@ var tmp_grp_rnd;
 var tmp_grp;
 var grp_stop;
 var grp_swap;
-var beep_lead_in;
-var color_p;
-var color_n;
-var corr;
-var rec_frame_color;
-var rec_frame_opacity;
-var rec_pol;
-var rec_wd;
-var pre_trial_dur;
-var time_limit;
-var too_late_tol;
-var stop_tol;
-var key_list;
-var x_symb;
-var x8_new;
-var x16;
-var remap_pairs;
-var num_pos;
-var num_symb;
-var symb_perm;
-var n_map;
+var beep_lead_in = 0.1;
+var color_p = [(- 1), 1, (- 1)];
+var color_n = [1, (- 1), (- 1)];
+var corr = 0;
+var rec_frame_color = [1, 1, 1];
+var rec_frame_opacity = 1;
+var rec_pol = 1600;
+var rec_wd = 6;
+var pre_trial_dur = 0.2;
+var time_limit = 1.5;
+var too_late_tol = 0.2;
+var stop_tol = 2;
+var key_list = ["h", "u", "i", "l"];
+var x_symb = [0, 1, 2, 3, 4, 5, 6, 7];
+var x8_new = x_symb;
+var x16 = x8_new.concat(x8_new);
+var remap_pairs = [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]];
+var num_pos = 4;
+var num_symb = 8;
+var symb_perm = permute(x_symb);
+var n_map = symb_perm.length;
 var symb_remap_ind;
 var symb_map_ind;
 var symb_map;
@@ -211,23 +211,27 @@ var symb_g_map;
 var symb_g_remap;
 var symb_r_map;
 var symb_r_remap;
-var tr_block_hand;
-var num_trials_hand;
-var num_trials_cr;
-var num_criterion;
-var num_trials;
-var rt_block;
-var tr_block_old;
-var tr_block_new_swap;
-var tr_block_new_stop;
-var tr_hand_yes;
-var rt_hand_yes;
-var cr_old_yes;
-var cr_new_yes;
-var rt_yes;
-var tr_old_pre_yes;
-var tr_old_post_yes;
-var tr_new_yes;
+////////////////////////////////////
+var tr_block_hand = 4;
+var num_trials_hand = 4;
+var num_trials_cr = 2000;
+var num_criterion = 1;
+var num_trials = 8;
+var rt_block = 12;
+var tr_block_old = 2;
+var tr_block_new_swap = 0;
+var tr_block_new_stop = 0;
+
+var tr_hand_yes = 1;
+var rt_hand_yes = 1;
+var cr_old_yes = 1;
+var cr_new_yes = 1;
+var rt_yes = 1;
+var tr_old_pre_yes = 1;
+var tr_old_post_yes = 1;
+var tr_new_yes = 1;
+//////////////////////////////////////
+
 var timing_tol_early;
 var timing_tol_late;
 var tr_feedback_text;
@@ -351,7 +355,7 @@ function experimentInit() {
 
   var seed1 = participant; // determine group
   var seed2 = participant + 1; //determine symb-key map
-  var myrng = new Math.seedrandom('helloe.');   //use new here so it does not affect Math.random()
+  var myrng = new Math.seedrandom('hello.');   //use new here so it does not affect Math.random()
   console.log(myrng)
   console.log(participant)
 
@@ -371,44 +375,16 @@ function experimentInit() {
   } else {
       grp_swap = 1;
   }
-  beep_lead_in = 0.1;
-  color_p = [(- 1), 1, (- 1)];
-  color_n = [1, (- 1), (- 1)];
-  corr = 0;
-  rec_frame_color = [1, 1, 1];
-  rec_frame_opacity = 1;
-  rec_pol = 1600;
-  rec_wd = 6;
-  pre_trial_dur = 0.2;
-  time_limit = 1.5;
-  too_late_tol = 0.2;
-  stop_tol = 2;
-  key_list = ["h", "u", "i", "l"];
-  x_symb = [0, 1, 2, 3, 4, 5, 6, 7];
-  x8_new = x_symb;
-  x16 = x8_new.concat(x8_new);
-  remap_pairs = [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]];
-  num_pos = 4;
-  num_symb = 8;
-  symb_perm = permute(x_symb);
-  n_map = symb_perm.length;
-  symb_remap_ind = [];
-  symb_map_ind = [];
-  symb_map = [];
-  symb_remap = [];
-  symb_g_map = [];
-  symb_g_remap = [];
-  symb_r_map = [];
-  symb_r_remap = [];
-  tr_block_hand = 4;
-  num_trials_hand = 4;
-  num_trials_cr = 2000;
-  num_criterion = 1;
-  num_trials = 8;
-  rt_block = 12;
-  tr_block_old = 2;
-  tr_block_new_swap = 0;
-  tr_block_new_stop = 0;
+  
+  //symb_remap_ind = [];
+  //symb_map_ind = [];
+  //symb_map = [];
+  //symb_remap = [];
+  //symb_g_map = [];
+  //symb_g_remap = [];
+  //symb_r_map = [];
+  //symb_r_remap = [];
+  
   if ((grp_swap === 1)) {
       tr_block_new_swap = 2;
   } else {
@@ -416,14 +392,7 @@ function experimentInit() {
           tr_block_new_stop = 2;
       }
   }
-  tr_hand_yes = 1;
-  rt_hand_yes = 1;
-  cr_old_yes = 1;
-  cr_new_yes = 1;
-  rt_yes = 1;
-  tr_old_pre_yes = 1;
-  tr_old_post_yes = 1;
-  tr_new_yes = 1;
+  
   if ((session === 1)) {
       rt_block = 1;
   }
