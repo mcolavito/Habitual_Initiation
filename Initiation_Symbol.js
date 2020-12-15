@@ -4600,7 +4600,7 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       // keep track of start time/frame for later
       TR_Beep_Hand.tStart = t;  // (not accounting for frame time here)
       TR_Beep_Hand.frameNStart = frameN;  // exact frame index
-      
+      console.log(TR_Beep_Hand.tStart)
       psychoJS.window.callOnFlip(function(){ TR_Beep_Hand.play(); });  // screen flip
       TR_Beep_Hand.status = PsychoJS.Status.STARTED;
     }
@@ -4617,9 +4617,7 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       
       TR_Rec_Frame_Hand.setAutoDraw(true);
     }
-    console.log(TR_Beep_Hand.tStart)
-    console.log(TR_Rec_Frame_Hand.tStart)
-    
+
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (TR_Rec_Frame_Hand.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       TR_Rec_Frame_Hand.setAutoDraw(false);
