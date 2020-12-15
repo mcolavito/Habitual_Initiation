@@ -349,9 +349,9 @@ function experimentInit() {
   participant = Number.parseInt(expInfo["participant"]);
   session = Number.parseInt(expInfo["session"]);
 
-  var myrng = new Math.seedrandom(participant);
+  var myrng = new Math.seedrandom(participant);   //use new here so it does not affect Math.random()
   console.log(myrng.int32)
-  
+
   //determine which group participants are in
   grp_list = permute([1, 2, 3, 4]);
   grp_list_num = grp_list.length;
@@ -397,7 +397,6 @@ function experimentInit() {
   symb_g_remap = [];
   symb_r_map = [];
   symb_r_remap = [];
-  rt_block_hand = 1;
   tr_block_hand = 4;
   num_trials_hand = 4;
   num_trials_cr = 2000;
