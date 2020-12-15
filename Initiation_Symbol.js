@@ -4202,8 +4202,9 @@ function RT_Feedback_HandRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ RT_Feedback_Coin_Hand.play(); });  // screen flip
       RT_Feedback_Coin_Hand.status = PsychoJS.Status.STARTED;
     }
-
-    if (t >= feedback_dur && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
+    
+    frameRemains = 0.0 + feedback_dur - psychoJS.window.monitorFramePeriod * 0.75;
+    if (t >= frameRemains && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
     //  RT_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
       RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
     }
@@ -4876,7 +4877,9 @@ function TR_Feedback_HandRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ TR_Feedback_Coin_Hand.play(); });  // screen flip
       TR_Feedback_Coin_Hand.status = PsychoJS.Status.STARTED;
     }
-    if (t >= feedback_dur && TR_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
+    
+    frameRemains = 0.0 + feedback_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && TR_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
       //TR_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
       TR_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
     }
