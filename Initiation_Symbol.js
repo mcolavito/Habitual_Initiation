@@ -3156,8 +3156,7 @@ function Init_StimRoutineBegin(trials) {
     symb_remap_ind[remap_pair_1[1]] = symb_map_ind[remap_pair_1[0]];
     symb_remap_ind[remap_pair_2[0]] = symb_map_ind[remap_pair_2[1]];
     symb_remap_ind[remap_pair_2[1]] = symb_map_ind[remap_pair_2[0]];
-    console.log(remap_pair_1)
-    console.log(remap_pair_2)
+
     for (var i = 0, _pj_a = num_symb; (i < _pj_a); i += 1) {
         symb_map.append(symb[symb_map_ind[i]]);
         symb_remap.append(symb[symb_remap_ind[i]]);
@@ -4158,7 +4157,6 @@ function RT_Feedback_HandRoutineBegin(trials) {
     value: coin,
     secs: -1,
     });
-    console.log(RT_Feedback_Coin_Hand.getDuration())
     RT_Feedback_Coin_Hand.setVolume(sound_vol);
     RT_Rec_Frame_Feedback_Hand.setOpacity(rec_frame_opacity);
     RT_Rec_Frame_Feedback_Hand.setLineColor(new util.Color(rec_frame_color));
@@ -4555,7 +4553,6 @@ function TR_Enter_Trials_HandRoutineBegin(trials) {
     value: beep,
     secs: -1,
     });
-    console.log(TR_Beep_Hand.getDuration())
     TR_Beep_Hand.setVolume(1);
     routineTimer.reset(time_limit);
     tr_press_early = 0;
@@ -5669,8 +5666,9 @@ function RT_FeedbackRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ CR_Feedback_Coin_Old.play(); });  // screen flip
       CR_Feedback_Coin_Old.status = PsychoJS.Status.STARTED;
     }
-    if (t >= (CR_Feedback_Coin_Old.getDuration() + CR_Feedback_Coin_Old.tStart)     && CR_Feedback_Coin_Old.status === PsychoJS.Status.STARTED) {
-      CR_Feedback_Coin_Old.stop();  // stop the sound (if longer than duration)
+    frameRemains = 0.0 + feedback_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && CR_Feedback_Coin_Old.status === PsychoJS.Status.STARTED) {
+      //CR_Feedback_Coin_Old.stop();  // stop the sound (if longer than duration)
       CR_Feedback_Coin_Old.status = PsychoJS.Status.FINISHED;
     }
     
@@ -5736,7 +5734,7 @@ function RT_FeedbackRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    CR_Feedback_Coin_Old.stop();  // ensure sound has stopped at end of routine
+    //CR_Feedback_Coin_Old.stop();  // ensure sound has stopped at end of routine
     // the Routine "RT_Feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -6283,8 +6281,9 @@ function TR_FeedbackRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ TR_Feedback_Coin.play(); });  // screen flip
       TR_Feedback_Coin.status = PsychoJS.Status.STARTED;
     }
-    if (t >= (TR_Feedback_Coin.getDuration() + TR_Feedback_Coin.tStart)     && TR_Feedback_Coin.status === PsychoJS.Status.STARTED) {
-      TR_Feedback_Coin.stop();  // stop the sound (if longer than duration)
+    frameRemains = 0.0 + feedback_dur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (t >= frameRemains && TR_Feedback_Coin.status === PsychoJS.Status.STARTED) {
+      //TR_Feedback_Coin.stop();  // stop the sound (if longer than duration)
       TR_Feedback_Coin.status = PsychoJS.Status.FINISHED;
     }
     
@@ -6364,7 +6363,7 @@ function TR_FeedbackRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    TR_Feedback_Coin.stop();  // ensure sound has stopped at end of routine
+    //TR_Feedback_Coin.stop();  // ensure sound has stopped at end of routine
     // the Routine "TR_Feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
