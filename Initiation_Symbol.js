@@ -93,15 +93,29 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     {'name': 'media/dnnb.png', 'path': './media/dnnb.png'},
+    {'name': 'media/dnnb_g.png', 'path': './media/dnnb_g.png'},
+    {'name': 'media/dnnb_r.png', 'path': './media/dnnb_R.png'},
     {'name': 'media/dinb.png', 'path': './media/dinb.png'},
+    {'name': 'media/dinb_g.png', 'path': './media/dinb_g.png'},
+    {'name': 'media/dinb_r.png', 'path': './media/dinb_r.png'},
     {'name': 'media/hand.png', 'path': './media/hand.png'},
     {'name': 'media/dgnb.png', 'path': './media/dgnb.png'},
+    {'name': 'media/dgnb_g.png', 'path': './media/dgnb_g.png'},
+    {'name': 'media/dgnb_r.png', 'path': './media/dgnb_r.png'},
     {'name': 'conditions.xlsx', 'path': './conditions.xlsx'},
     {'name': 'media/djnb.png', 'path': './media/djnb.png'},
+    {'name': 'media/djnb_g.png', 'path': './media/djnb_g.png'},
+    {'name': 'media/djnb_r.png', 'path': './media/djnb_r.png'},
     {'name': 'media/ddnb.png', 'path': './media/ddnb.png'},
     {'name': 'media/dfnb.png', 'path': './media/dfnb.png'},
+    {'name': 'media/dfnb_g.png', 'path': './media/dfnb_g.png'},
+    {'name': 'media/dfnb_r.png', 'path': './media/dfnb_r.png'},
     {'name': 'media/dcnb.png', 'path': './media/dcnb.png'},
+    {'name': 'media/dcnb_g.png', 'path': './media/dcnb_g.png'},
+    {'name': 'media/dcnb_r.png', 'path': './media/dcnb_r.png'},
     {'name': 'media/dmnb.png', 'path': './media/dmnb.png'},
+    {'name': 'media/dmnb_g.png', 'path': './media/dmnb_g.png'},
+    {'name': 'media/dmnb_r.png', 'path': './media/dmnb_r.png'},
     {'name': 'media/coin.wav', 'path': './media/coin.wav'},
     {'name': 'media/buzz.wav', 'path': './media/buzz.wav'},
     {'name': 'media/beep.wav', 'path': './media/beep.wav'}
@@ -3235,28 +3249,28 @@ With your Right hand, place your Index, Middle, Ring, and Pinky fingers on (H, U
     
 You will see a hand appear on the screen. One of the fingers on the screen will light up and your job is to press the corresponding finger as quickly and as accurately as possible.
     
-Ready? Press one of these keys to continue.`
+Ready? Press one of (H, U, I, L) to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
 Now, you need to press the corresponding finger when the larger white ring intersects the smaller grey ring. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers when two rings intersect.
     
-Let’s practice! Press one of the keys (H, U, I, L) to continue.`
+Let’s practice! Press one of (H, U, I, L) to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
-You will see eight symbols on the screen. Each symbol corresponds to one of the keys (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
+You will see eight symbols on the screen. Each symbol corresponds to one of (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
 
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
-Ready? Press one of the keys (H, U, I, L) to continue.`
+Ready? Press one of (H, U, I, L) to continue.`
     ;
     if ((session === 1)) {
         instr_rt_text = `Now using the maps that you just learned, your job is to press the corresponding key as quickly and as accurately as possible.
     
 There will be ${rt_block} blocks with short breaks in between.
     
-Whenever you are ready, press one of the keys (H, U, I, L) to start.`
+Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((1 < session)) {
@@ -3264,7 +3278,7 @@ Whenever you are ready, press one of the keys (H, U, I, L) to start.`
     
 Remember, your job is to press the corresponding key as quickly and accurately as you can.
     
-Whenever you are ready, press one of the keys (H, U, I, L) to start.`
+Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
         }
     }
@@ -3272,13 +3286,13 @@ Whenever you are ready, press one of the keys (H, U, I, L) to start.`
     
 In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-Press one of the keys (H, U, I, L) to start.`
+Press one of (H, U, I, L) to start.`
     ;
     instr_tr_old_post_text = `Good job so far.
     
 In the following 6 blocks, press the corresponding key when the larger white ring intersects the smaller gray ring. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
-Press one of the keys (H, U, I, L) to start.`
+Press one of (H, U, I, L) to start.`
     ;
     if ((grp_stop === 1)) {
         instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
@@ -3332,11 +3346,11 @@ Press one of you finger to start the block.`
     }
     penalty_toolate_text = `Response was too late.
 2 second penalty.
-After 2 second, press one of the keys (H, U, I, L) to continue.`
+After 2 second penalty, press one of (H, U, I, L) to continue.`
     ;
     penalty_tooearly_text = `Response was too early.
 2 second penalty.
-After 2 second, press one of the keys (H, U, I, L) to continue.`
+After 2 second, press one of (H, U, I, L) to continue.`
     ;
     feedback_early_text = `little early`;
     feedback_late_text = `little late`;
