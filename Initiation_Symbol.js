@@ -3147,6 +3147,8 @@ function Init_StimRoutineBegin(trials) {
     remap_pair_1 = remap_pairs[(participant % n_map)];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(i in remap_pair_1)) {
+            console.log(i)
+            console.log(i + 4)
             remap_pair_2.append((i + 4));
         }
     }
@@ -4199,10 +4201,10 @@ function RT_Feedback_HandRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ RT_Feedback_Coin_Hand.play(); });  // screen flip
       RT_Feedback_Coin_Hand.status = PsychoJS.Status.STARTED;
     }
-    if (t >= (RT_Feedback_Coin_Hand.getDuration() + RT_Feedback_Coin_Hand.tStart)     && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
+    // if (t >= (RT_Feedback_Coin_Hand.getDuration() + RT_Feedback_Coin_Hand.tStart)     && RT_Feedback_Coin_Hand.status === PsychoJS.Status.STARTED) {
     //  RT_Feedback_Coin_Hand.stop();  // stop the sound (if longer than duration)
-      RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
-    }
+    //  RT_Feedback_Coin_Hand.status = PsychoJS.Status.FINISHED;
+    // }
     
     // *RT_Rec_Frame_Feedback_Hand* updates
     if (t >= 0.0 && RT_Rec_Frame_Feedback_Hand.status === PsychoJS.Status.NOT_STARTED) {
