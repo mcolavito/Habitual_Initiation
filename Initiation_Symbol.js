@@ -4600,9 +4600,10 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       // keep track of start time/frame for later
       TR_Beep_Hand.tStart = t;  // (not accounting for frame time here)
       TR_Beep_Hand.frameNStart = frameN;  // exact frame index
-      console.log(TR_Beep_Hand.tStart)
+      console.log(TR_Enter_Trials_HandClock.getTime())
       psychoJS.window.callOnFlip(function(){ TR_Beep_Hand.play(); });  // screen flip
       TR_Beep_Hand.status = PsychoJS.Status.STARTED;
+      console.log(TR_Enter_Trials_HandClock.getTime())
     }
     if (t >= (TR_Beep_Hand.getDuration() + TR_Beep_Hand.tStart)     && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
       TR_Beep_Hand.stop();  // stop the sound (if longer than duration)
