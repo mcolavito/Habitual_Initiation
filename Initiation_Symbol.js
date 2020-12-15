@@ -359,7 +359,7 @@ function experimentInit() {
   var seed1 = participant; // determine group
   var seed2 = participant + 1; //determine symb-key map
   var myrng = new Math.seedrandom('hello.');   //use new here so it does not affect Math.random()
-  console.log(myrng)
+  //console.log(myrng)
 
   //determine which group participants are in
   grp_list = permute([1, 2, 3, 4]);
@@ -3060,8 +3060,8 @@ function Import_Stim_FileRoutineEnd(trials) {
 var coin;
 var beep;
 var symb_map_rnd;
-var remap_pair_1;
-var remap_pair_2;
+var remap_pair_1 = [];
+var remap_pair_2 = [];
 var Init_StimComponents;
 function Init_StimRoutineBegin(trials) {
   return function () {
@@ -3092,8 +3092,7 @@ function Init_StimRoutineBegin(trials) {
         symb_map_rnd = (((participant * participant) + participant) % n_map);
     }
     symb_map_ind = symb_perm[symb_map_rnd];
-    remap_pair_1 = [];
-    remap_pair_2 = [];
+    
     remap_pair_1 = remap_pairs[(participant % n_map)];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(remap_pair_1.includes(i))) {
