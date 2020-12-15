@@ -401,8 +401,8 @@ function experimentInit() {
   num_trials = 8;
   rt_block = 12;
   tr_block_old = 2;
-  tr_block_new_swap = 6;
-  tr_block_new_stop = 6;
+  tr_block_new_swap = 0;
+  tr_block_new_stop = 0;
   if ((grp_swap === 1)) {
       tr_block_new_swap = 2;
   } else {
@@ -3299,7 +3299,7 @@ Press one of (H, U, I, L) to start.`
     if ((grp_stop === 1)) {
         instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
     
-There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
+There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H,U,I,L).
     
 Your job is to figure out the map.
     
@@ -3309,7 +3309,7 @@ Think before you press the key. The accuracy is the priority, so go as slow as y
         if ((grp_swap === 1)) {
             instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
     
-There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l).
+There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H,U,I,L).
     
 Your job is to figure out the map.
     
@@ -4617,7 +4617,9 @@ function TR_Enter_Trials_HandRoutineEachFrame(trials) {
       
       TR_Rec_Frame_Hand.setAutoDraw(true);
     }
-
+    console.log(TR_Beep_Hand.tStart)
+    console.log(TR_Rec_Frame_Hand.tStart)
+    
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (TR_Rec_Frame_Hand.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       TR_Rec_Frame_Hand.setAutoDraw(false);
