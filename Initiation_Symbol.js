@@ -3076,6 +3076,7 @@ function Init_StimRoutineBegin(trials) {
 
     symb_map_rnd = Math.floor(rng2 * num_symb) // random interger between 0 and num_symb - 1
     symb_map_ind = symb_perm[symb_map_rnd];
+    console.log(symb_perm)
     console.log(rng2)
     console.log(symb_map_ind)
 
