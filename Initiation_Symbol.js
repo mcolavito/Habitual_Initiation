@@ -349,7 +349,9 @@ function experimentInit() {
   participant = Number.parseInt(expInfo["participant"]);
   session = Number.parseInt(expInfo["session"]);
 
-  var myrng = new Math.seedrandom(participant.toString());   //use new here so it does not affect Math.random()
+  var seed1 = participant; // determine group
+  var seed2 = participant + 1; //determine symb-key map
+  var myrng = new Math.seedrandom(seed1.toString());   //use new here so it does not affect Math.random()
   console.log(myrng)
 
   //determine which group participants are in
