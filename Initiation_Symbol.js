@@ -350,7 +350,7 @@ function experimentInit() {
   session = Number.parseInt(expInfo["session"]);
 
   var myrng = new Math.seedrandom(participant);   //use new here so it does not affect Math.random()
-  console.log(myrng.int32)
+  console.log(myrng)
 
   //determine which group participants are in
   grp_list = permute([1, 2, 3, 4]);
