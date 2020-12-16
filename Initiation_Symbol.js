@@ -219,13 +219,13 @@ var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 1;
-var rt_hand_yes = 1;
-var cr_old_yes = 1;
+var tr_hand_yes = 0;
+var rt_hand_yes = 0;
+var cr_old_yes = 0;
 var cr_new_yes = 1;
-var rt_yes = 1;
-var tr_old_pre_yes = 1;
-var tr_old_post_yes = 1;
+var rt_yes = 0;
+var tr_old_pre_yes = 0;
+var tr_old_post_yes = 0;
 var tr_new_yes = 1;
 //////////////////////////////////////
 
@@ -6837,7 +6837,7 @@ function RT_Enter_Trial_StopRoutineEnd(trials) {
     }
     sound_vol = 0;
     if ((stimnum_item in remap_pair_1) || (stimnum_item in remap_pair_2)) {
-        if ((RT_Press_Stop.keys.length === 0)) {
+        if ((RT_Press_Stop.keys === undefined)) {
             corr = 1;
             feedback_image = symb_g_item;
             feedback_dur = 0.3;
