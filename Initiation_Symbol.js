@@ -6845,7 +6845,7 @@ function RT_Enter_Trial_StopRoutineEnd(trials) {
       }
     }
     sound_vol = 0;
-    if ((stimnum_item in remap_pair_1) || (stimnum_item in remap_pair_2)) {
+    if ((remap_pair_1.includes(stimnum_item)) || (remap_pair_2.includes(stimnum_item))) {
         if ((RT_Press_Stop.keys === undefined)) {
             corr = 1;
             feedback_image = symb_g_item;
@@ -7218,7 +7218,7 @@ function TR_Enter_Trials_StopRoutineEnd(trials) {
     }
     //TR_Beep_Stop.stop();  // ensure sound has stopped at end of routine
     sound_vol = 0;
-    if ((stimnum_item in remap_pair_1) || (stimnum_item in remap_pair_2)) {
+    if ((remap_pair_1.includes(stimnum_item)) || (remap_pair_2.includes(stimnum_item))) {
         if ((TR_Press_Stop.keys === undefined)) {
             corr = 1;
             feedback_image = symb_g_item;
