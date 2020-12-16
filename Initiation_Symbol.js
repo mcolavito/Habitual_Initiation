@@ -6929,15 +6929,15 @@ function Instr_TR_NewRoutineBegin(trials) {
     block_count = 0;
     trial_count_item = [0, 0, 0, 0, 0, 0, 0, 0];
     if (grp_stop === 1) {
-      symb = symb_map;
-      symb_g = symb_g_map;
-      symb_r = symb_r_map;
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
     } else {
-      if (grp_swap === 1) {
-        symb = symb_remap;
-        symb_g = symb_g_remap;
-        symb_r = symb_r_remap;
-      }
+        if (grp_swap === 1) {
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        }
     }
     
     // keep track of which components have finished
