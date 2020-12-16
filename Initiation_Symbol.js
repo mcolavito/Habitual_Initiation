@@ -1531,7 +1531,7 @@ function Import_StimLoopBegin(thisScheduler) {
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.xlsx', '0:8'),
     seed: undefined, name: 'Import_Stim'
   });
-  // psychoJS.experiment.addLoop(Import_Stim); // add the loop to the experiment
+  psychoJS.experiment.addLoop(Import_Stim); // add the loop to the experiment
   currentLoop = Import_Stim;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
