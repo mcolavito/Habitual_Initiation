@@ -6588,9 +6588,18 @@ function Instr_CR_NewRoutineBegin(trials) {
     stim_type = "Symb";
     block_count = 0;
     remap = 1;
-    symb = symb_remap;
-    symb_g = symb_g_remap;
-    symb_r = symb_r_remap;
+    
+    if (grp_stop === 1) {
+      symb = symb_map;
+      symb_g = symb_g_map;
+      symb_r = symb_r_map;
+    } else {
+      if (grp_swap === 1) {
+        symb = symb_remap;
+        symb_g = symb_g_remap;
+        symb_r = symb_r_remap;
+      }
+    }
     
     // keep track of which components have finished
     Instr_CR_NewComponents = [];
