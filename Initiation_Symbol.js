@@ -2629,7 +2629,7 @@ function TR_New_BoolLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_New_Bool'
   });
-  psychoJS.experiment.addLoop(TR_New_Bool); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(TR_New_Bool); // add the loop to the experiment
   currentLoop = TR_New_Bool;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2664,7 +2664,7 @@ function TR_New_Block_SwapLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_New_Block_Swap'
   });
-  psychoJS.experiment.addLoop(TR_New_Block_Swap); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(TR_New_Block_Swap); // add the loop to the experiment
   currentLoop = TR_New_Block_Swap;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2736,7 +2736,7 @@ function TR_Feedback_New_Swap_BoolLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_Feedback_New_Swap_Bool'
   });
-  psychoJS.experiment.addLoop(TR_Feedback_New_Swap_Bool); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(TR_Feedback_New_Swap_Bool); // add the loop to the experiment
   currentLoop = TR_Feedback_New_Swap_Bool;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2770,7 +2770,7 @@ function TR_Penalty_New_Swap_BoolLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_Penalty_New_Swap_Bool'
   });
-  psychoJS.experiment.addLoop(TR_Penalty_New_Swap_Bool); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(TR_Penalty_New_Swap_Bool); // add the loop to the experiment
   currentLoop = TR_Penalty_New_Swap_Bool;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2818,7 +2818,7 @@ function TR_New_Block_StopLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_New_Block_Stop'
   });
-  psychoJS.experiment.addLoop(TR_New_Block_Stop); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(TR_New_Block_Stop); // add the loop to the experiment
   currentLoop = TR_New_Block_Stop;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2890,7 +2890,7 @@ function TR_Feedback_New_Stop_BoolLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_Feedback_New_Stop_Bool'
   });
-  psychoJS.experiment.addLoop(TR_Feedback_New_Stop_Bool); // add the loop to the experiment
+  //psychoJS.experiment.addLoop(TR_Feedback_New_Stop_Bool); // add the loop to the experiment
   currentLoop = TR_Feedback_New_Stop_Bool;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
@@ -2924,7 +2924,7 @@ function TR_Penalty_New_Stop_BoolLoopBegin(thisScheduler) {
     trialList: undefined,
     seed: undefined, name: 'TR_Penalty_New_Stop_Bool'
   });
-  psychoJS.experiment.addLoop(TR_Penalty_New_Stop_Bool); // add the loop to the experiment
+  //psychoJS.experiment.addLoop(TR_Penalty_New_Stop_Bool); // add the loop to the experiment
   currentLoop = TR_Penalty_New_Stop_Bool;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
