@@ -360,10 +360,7 @@ function experimentInit() {
   rng1 = myrng()
   rng2 = myrng()
   rng3 = myrng()
-  console.log(rng1)
-  console.log(rng2)
-  console.log(rng3)
-
+  
   //determine which group participants are in
   if ((rng1 < 0.5)) {
       grp_stop = 1;
@@ -373,10 +370,12 @@ function experimentInit() {
       tr_block_new_swap = 2;
   }
   
+  // session # determines which blocks they do
   if ((session === 1)) {
       rt_block = 1;
   }
   
+  // randomize prep-time so that prep-time for each symbol spread over a good range
   for (var i = 0, _pj_a = 12; (i < _pj_a); i += 1) {
       prep_time_ind_tmp.push(i);
   }
@@ -1532,7 +1531,7 @@ function Import_StimLoopBegin(thisScheduler) {
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.xlsx', '0:8'),
     seed: undefined, name: 'Import_Stim'
   });
-  psychoJS.experiment.addLoop(Import_Stim); // add the loop to the experiment
+  // psychoJS.experiment.addLoop(Import_Stim); // add the loop to the experiment
   currentLoop = Import_Stim;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
