@@ -7219,7 +7219,7 @@ function TR_Enter_Trials_StopRoutineEnd(trials) {
     //TR_Beep_Stop.stop();  // ensure sound has stopped at end of routine
     sound_vol = 0;
     if ((stimnum_item in remap_pair_1) || (stimnum_item in remap_pair_2)) {
-        if ((TR_Press_Stop.keys.length === 0)) {
+        if ((TR_Press_Stop.keys === undefined)) {
             corr = 1;
             feedback_image = symb_g_item;
             tr_feedback = 1;
