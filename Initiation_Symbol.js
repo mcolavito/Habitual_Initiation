@@ -348,9 +348,10 @@ var TR_Press_Stop;
 var globalClock;
 var routineTimer;
 
-document.body.style.cursor='none';
 
 function experimentInit() {
+  document.body.style.cursor='none';
+  
   // Initialize components for Routine "Import_Stim_File"
   Import_Stim_FileClock = new util.Clock();
   // Initialize components for Routine "Init_Stim"
@@ -7443,5 +7444,7 @@ function quitPsychoJS(message, isCompleted) {
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
   
+  document.body.style.cursor='auto';
+
   return Scheduler.Event.QUIT;
 }
