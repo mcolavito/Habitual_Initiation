@@ -3176,14 +3176,11 @@ function Init_StimRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    instr_end_exp_text = `Great job! You have completed the task.
-    
-Press (space) to exit.`
-    ;
-
     instr_exp_text = `Thank you for participating in our study!
     
-This study has multiple sessions and it will take 40 minutes today. Once you start, you cannot turn off your web browser until you complete the study.
+This study will take about 1 hour and 30 minutes. 
+
+Once you start, you can take a break if you need, BUT please do NOT turn off your web browser until you complete the study.
     
 If you are ready, press (space) to continue.`
     ;
@@ -3197,13 +3194,13 @@ Ready? Press one of (H, U, I, L) to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
-In the following practice, you will hear four beeps every time. Your job is to press the corresponding finger synchronizing with the fourth beep. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
+In the following practice, you need to press the corresponding finger synchronizing with the fourth beep. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
     
 Let’s practice! Press one of (H, U, I, L) to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
-You will see eight symbols on the screen. Each symbol corresponds to one of (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
+You will see eight symbols on the screen, one at a time. Each symbol corresponds to one of (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
 
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
@@ -3228,11 +3225,11 @@ Whenever you are ready, press one of (H, U, I, L) to start.`
     }
     instr_tr_old_pre_text = `Good job so far.
     
-In the following 2 blocks, use the symbol-key map you learned and press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 2 blocks, press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
 Press one of (H, U, I, L) to start.`
     ;
-    instr_tr_old_post_text = `Good job so far.
+    instr_tr_old_post_text = `Great job.
     
 In the following 2 blocks, you will hear four beeps again. Press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
@@ -3241,7 +3238,7 @@ Press one of (H, U, I, L) to start.`
     if ((grp_stop === 1)) {
         instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
     
-There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H,U,I,L).
+There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H, U, I, L).
     
 Your job is to figure out the map.
     
@@ -3251,44 +3248,34 @@ Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
-            instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
+            instr_cr_new_text = `Congratulations!
     
-There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H,U,I,L).
-    
-Your job is to figure out the map.
-    
-Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.
+Now, you need to learn a NEW association bewtween those symbols and keys.
+
+Again, ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
 
 Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
         }
     }
     if ((grp_stop === 1)) {
-        instr_tr_new_text = `In the following set of blocks, still use the symbol-key map you practiced previously.
+        instr_tr_new_text = `Congratulations!
     
-Press the corresponding key when the moving ring overlaps the while circle.
-    
-Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
-    
-This task is designed to be very hard, so it is ok to make a guess.
-    
-There will be five blocks in total.
-    
-Press one of you finger to start the block.`
+Now, you need to learn a NEW association bewtween those symbols and keys.
+        
+Again, ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
+        
+Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
-            instr_tr_new_text = `In the following set of blocks, still use the symbol-key map you practiced previously.
+            instr_tr_new_text = `In the following set of blocks, still use the NEW symbol-key map you just learned.
     
-Press the corresponding key when the moving ring overlaps the while circle.
+Press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+      
+These are the last five blocks for this experiment.
     
-Remember, the symbol may show up very late. In these cases, you do not have time to think about which key to press, make a guess.
-    
-This task is designed to be very hard, so it is ok to make a guess.
-    
-There will be five blocks in total.
-    
-Press one of you finger to start the block.`
+Press one of (H, U, I, L) to start.`
     ;
         }
     }
