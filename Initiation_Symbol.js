@@ -29,7 +29,7 @@ let expInfo = {'participant': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
-  text: "Welcome. Make sure you type in your 'participation ID', then press 'Ok' to continue.",
+  text: "Welcome. Press 'Ok' to the instruction. Please read it carefully.",
   dictionary: expInfo,
   title: expName
 }));
@@ -3180,9 +3180,11 @@ function Init_StimRoutineEnd(trials) {
     
 This study will take about 1 hour and 30 minutes. 
 
-Once you start, you can take a break if you need, BUT please do NOT turn off your web browser until you complete the study.
+Once you start, you can take a break between rounds, BUT you cannot turn off your web browser until you complete the study.
     
-If you are ready, press (space) to continue.`
+
+
+Press (space) to continue.`
     ;
     instr_rt_text_hand = `The upcoming three blocks are used to be familiar with the task.
     
@@ -3190,20 +3192,31 @@ With your Right hand, place your Index, Middle, Ring, and Pinky fingers on (H, U
     
 You will see a hand appear on the screen. One of the fingers on the screen will light up and your job is to press the corresponding finger as quickly and as accurately as possible.
     
-Ready? Press one of (H, U, I, L) to continue.`
+
+
+Press one of (H, U, I, L) to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
-In the following practice, you need to press the corresponding finger synchronizing with the fourth beep. Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
+In the following practice, you will hear 4 beeps. You need to press the corresponding finger ON the fourth beep. 
+
+
+Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
     
-Let’s practice! Press one of (H, U, I, L) to continue.`
+Let’s practice for 2 blocks! 
+
+
+Press one of (H, U, I, L) to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
 You will see eight symbols on the screen, one at a time. Each symbol corresponds to one of (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
 
+
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
+
+
 Ready? Press one of (H, U, I, L) to continue.`
     ;
     if ((session === 1)) {
@@ -3211,6 +3224,7 @@ Ready? Press one of (H, U, I, L) to continue.`
     
 There will be ${rt_block} blocks with short breaks in between.
     
+
 Whenever you are ready, press one of (H, U, I, L) to start.`
     ;
     } else {
@@ -3225,56 +3239,73 @@ Whenever you are ready, press one of (H, U, I, L) to start.`
     }
     instr_tr_old_pre_text = `Good job so far.
     
-In the following 2 blocks, press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 2 blocks, press the corresponding key ON the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
+
 Press one of (H, U, I, L) to start.`
     ;
     instr_tr_old_post_text = `Great job.
     
-In the following 2 blocks, you will hear four beeps again. Press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following 2 blocks, you will hear four beeps again. Press the corresponding key ON the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
+
 Press one of (H, U, I, L) to start.`
     ;
     if ((grp_stop === 1)) {
-        instr_cr_new_text = `Congratulations! Now, we are going to do the real task.
+        instr_cr_new_text = `Congratulations!
     
-There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (H, U, I, L).
-    
-Your job is to figure out the map.
-    
-Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.
-    
-Whenever you are ready, press one of (H, U, I, L) to start.`
+Now, you will see the same eight symbols, but this time some of them may no longer correspond with a key (H, U, I, L).
+        
+Your job is to figure out which are those symbols and DO NOT PRESS ANY KEY when they appear. Instead, simply wait for 2 seconds.
+        
+        
+ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
+        
+        
+Press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
             instr_cr_new_text = `Congratulations!
     
-Now, you need to learn a NEW association bewtween those symbols and keys.
+Now, you will see the same eight symbols, but this time they may correspond with different key (H, U, I, L).
 
-Again, ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
+Your job is to figure out the new association between the symbols and the keys.
 
-Whenever you are ready, press one of (H, U, I, L) to start.`
+
+ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
+
+
+Press one of (H, U, I, L) to start.`
     ;
         }
     }
     if ((grp_stop === 1)) {
-        instr_tr_new_text = `Congratulations!
-    
-Now, you need to learn a NEW association bewtween those symbols and keys.
+        instr_tr_new_text = `In the following set of blocks, use the NEW symbol-key map you just learned, press the corresponding key on the fourth beep. 
+            
+Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+              
+These are the last 6 blocks for this experiment.
+            
         
-Again, ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
-        
-Whenever you are ready, press one of (H, U, I, L) to start.`
+Press one of (H, U, I, L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
-            instr_tr_new_text = `In the following set of blocks, still use the NEW symbol-key map you just learned.
-    
-Press the corresponding key on the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+            instr_tr_new_text = `In the following set of blocks, use the NEW symbol-key map you just learned, press the corresponding key on the fourth beep. 
+
+If you see a symbol that requires a response, respond ON the FOURTH beep.             
+
+If you see a symbol that does NOT require a response, DO NOT PRESS ANYTHING.
+
+
+Remember, the symbol may show up very late. In this case, MAKE A GUESS.
+
+If you decide to press, remember to respond ON the FOURTH beep.
       
-These are the last five blocks for this experiment.
+These are the last 6 blocks for this experiment.
     
+
 Press one of (H, U, I, L) to start.`
     ;
         }
