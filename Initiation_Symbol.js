@@ -83,6 +83,9 @@ const TR_New_BoolLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(TR_New_BoolLoopBegin, TR_New_BoolLoopScheduler);
 flowScheduler.add(TR_New_BoolLoopScheduler);
 flowScheduler.add(TR_New_BoolLoopEnd);
+flowScheduler.add(Instr_End_ExpRoutineBegin());
+flowScheduler.add(Instr_End_ExpRoutineEachFrame());
+flowScheduler.add(Instr_End_ExpRoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -190,22 +193,22 @@ var symb_r_map = [];
 var symb_r_remap = [];
 ////////////////////////////////////
 var tr_block_hand = 4;
-var num_trials_hand = 4;
+var num_trials_hand = 10;
 var num_trials_cr = 2000;
-var num_criterion = 1;
+var num_criterion = 5;
 var num_trials = 8;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 0;
-var rt_hand_yes = 0;
-var cr_old_yes = 0;
+var tr_hand_yes = 1;
+var rt_hand_yes = 1;
+var cr_old_yes = 1;
 var cr_new_yes = 1;
-var rt_yes = 0;
-var tr_old_pre_yes = 0;
-var tr_old_post_yes = 0;
+var rt_yes = 1;
+var tr_old_pre_yes = 1;
+var tr_old_post_yes = 1;
 var tr_new_yes = 1;
 //////////////////////////////////////
 
@@ -325,6 +328,9 @@ var TR_Beep_Stop;
 var TR_Rec_Frame_Stop;
 var TR_Stim_Image_Stop;
 var TR_Press_Stop;
+var Instr_End_ExpClock;
+var Instr_End_Exp_Text;
+var Instr_End_Exp_Key;
 var globalClock;
 var routineTimer;
 
@@ -349,10 +355,10 @@ function experimentInit() {
   //determine which group participants are in
   if ((rng1 < 0.5)) {
       grp_stop = 1;
-      tr_block_new_stop = 2;
+      tr_block_new_stop = 1;
   } else {
       grp_swap = 1;
-      tr_block_new_swap = 2;
+      tr_block_new_swap = 1;
   }
   
   // session # determines which blocks they do
@@ -1497,6 +1503,21 @@ function experimentInit() {
   
   TR_Penalty_Press = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "Instr_End_Exp"
+  Instr_End_ExpClock = new util.Clock();
+  Instr_End_Exp_Text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'Instr_End_Exp_Text',
+    alignText: 'center',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  Instr_End_Exp_Key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -3132,7 +3153,7 @@ function Init_StimRoutineEachFrame(trials) {
   };
 }
 
-
+var instr_end_exp_text;
 var instr_exp_text;
 var instr_rt_text_hand;
 var instr_tr_text_hand;
@@ -3155,6 +3176,11 @@ function Init_StimRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
+    instr_end_exp_text = `Great job! You have completed the task.
+    
+Press (space) to exit.`
+    ;
+
     instr_exp_text = `Thank you for participating in our study!
     
 This study has multiple sessions and it will take 40 minutes today. Once you start, you cannot turn off your web browser until you complete the study.
@@ -7341,6 +7367,123 @@ function TR_Enter_Trials_StopRoutineEnd(trials) {
   };
 }
 
+var _Instr_End_Exp_Key_allKeys;
+var Instr_End_ExpComponents;
+function Instr_End_ExpRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'Instr_End_Exp'-------
+    t = 0;
+    Instr_End_ExpClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    Instr_End_Exp_Text.setText(instr_end_exp_text);
+    Instr_End_Exp_Key.keys = undefined;
+    Instr_End_Exp_Key.rt = undefined;
+    _Instr_End_Exp_Key_allKeys = [];
+    // keep track of which components have finished
+    Instr_End_ExpComponents = [];
+    Instr_End_ExpComponents.push(Instr_End_Exp_Text);
+    Instr_End_ExpComponents.push(Instr_End_Exp_Key);
+    
+    for (const thisComponent of Instr_End_ExpComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function Instr_End_ExpRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'Instr_End_Exp'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = Instr_End_ExpClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *Instr_End_Exp_Text* updates
+    if (t >= 0.0 && Instr_End_Exp_Text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      Instr_End_Exp_Text.tStart = t;  // (not accounting for frame time here)
+      Instr_End_Exp_Text.frameNStart = frameN;  // exact frame index
+      
+      Instr_End_Exp_Text.setAutoDraw(true);
+    }
+
+    
+    // *Instr_End_Exp_Key* updates
+    if (t >= 1 && Instr_End_Exp_Key.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      Instr_End_Exp_Key.tStart = t;  // (not accounting for frame time here)
+      Instr_End_Exp_Key.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { Instr_End_Exp_Key.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { Instr_End_Exp_Key.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { Instr_End_Exp_Key.clearEvents(); });
+    }
+
+    if (Instr_End_Exp_Key.status === PsychoJS.Status.STARTED) {
+      let theseKeys = Instr_End_Exp_Key.getKeys({keyList: ['space'], waitRelease: false});
+      _Instr_End_Exp_Key_allKeys = _Instr_End_Exp_Key_allKeys.concat(theseKeys);
+      if (_Instr_End_Exp_Key_allKeys.length > 0) {
+        Instr_End_Exp_Key.keys = _Instr_End_Exp_Key_allKeys[0].name;  // just the first key pressed
+        Instr_End_Exp_Key.rt = _Instr_End_Exp_Key_allKeys[0].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of Instr_End_ExpComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function Instr_End_ExpRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'Instr_End_Exp'-------
+    for (const thisComponent of Instr_End_ExpComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('Instr_End_Exp_Key.keys', Instr_End_Exp_Key.keys);
+    if (typeof Instr_End_Exp_Key.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('Instr_End_Exp_Key.rt', Instr_End_Exp_Key.rt);
+        routineTimer.reset();
+        }
+    
+    Instr_End_Exp_Key.stop();
+    // the Routine "Instr_End_Exp" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
 
 function endLoopIteration(thisScheduler, loop) {
   // ------Prepare for next entry------
