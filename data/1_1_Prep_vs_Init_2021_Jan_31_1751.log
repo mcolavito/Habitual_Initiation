@@ -1,0 +1,445 @@
+1.5237 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+6.7146 	WARNING 	User requested fullscreen with size [1080 1920], but screen is actually [1920, 1080]. Using actual size
+8.8344 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001AE47208908>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001AE46FC1358>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.8345 	EXP 	window1: recordFrameIntervals = False
+8.9993 	EXP 	window1: recordFrameIntervals = True
+9.1832 	EXP 	window1: recordFrameIntervals = False
+9.4241 	EXP 	Created Instr_Exp_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Exp_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.4265 	EXP 	Created Instr_RT_Hand_Rext = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_RT_Hand_Rext', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.4292 	EXP 	Created Pre_Trial_Rec_Frame_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+9.4319 	EXP 	Created Pre_Trial_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Pre_Trial_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+9.4331 	EXP 	Created RT_Rec_Frame_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+9.4347 	EXP 	Created RT_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+9.4380 	EXP 	Created RT_Stim_Hand = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-4.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='RT_Stim_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.025, 0.025]), units='height', vertices=ndarray(...), win=Window(...))
+10.1496 	EXP 	Sound RT_Feedback_Coin_Hand set volume 1.000
+10.1510 	EXP 	Created RT_Rec_Frame_Feedback_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Feedback_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.1533 	EXP 	Created RT_Feedback_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Feedback_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.1552 	EXP 	Created RT_Stim_Feedback_Hand = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-3.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='RT_Stim_Feedback_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.025, 0.025]), units='height', vertices=ndarray(...), win=Window(...))
+10.1578 	EXP 	Created instr_HAND_TR_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instr_HAND_TR_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.1601 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.1612 	EXP 	Created Pre_Trial_Rec_Frame_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.1635 	EXP 	Created Pre_Trial_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Pre_Trial_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.1637 	EXP 	Sound TR_Beep_Hand set volume 1.000
+10.1648 	EXP 	Created TR_Rec_Frame_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.1666 	EXP 	Created TR_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.1686 	EXP 	Created TR_Stim_Hand = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-4.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='TR_Stim_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.025, 0.025]), units='height', vertices=ndarray(...), win=Window(...))
+10.1687 	EXP 	Sound TR_Feedback_Coin_Hand set volume 1.000
+10.1698 	EXP 	Created Tr_Rec_Frame_Feedback_Hand = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Tr_Rec_Frame_Feedback_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.1863 	EXP 	Created TR_Feedback_Text_Hand = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='TR_Feedback_Text_Hand', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.1876 	EXP 	Created TR_Feedback_HandShape = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Feedback_HandShape', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.1896 	EXP 	Created TR_Stim_Feedback_Hand = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-4.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='TR_Stim_Feedback_Hand', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.025, 0.025]), units='height', vertices=ndarray(...), win=Window(...))
+10.1908 	EXP 	Created TR_Rec_Frame_Penalty = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Penalty', opacity=0.3, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2059 	EXP 	Created TR_Penalty_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='TR_Penalty_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2123 	EXP 	Created Instr_CR_Old_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_CR_Old_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2136 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2149 	EXP 	Created RT_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2171 	EXP 	Created RT_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2172 	EXP 	Sound CR_Feedback_Coin_Old set volume 1.000
+10.2184 	EXP 	Created RT_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2209 	EXP 	Created RT_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2233 	EXP 	Created Instr_TR_Old_Pre_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_TR_Old_Pre_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2256 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2268 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2269 	EXP 	Sound TR_Beep set volume 1.000
+10.2281 	EXP 	Created TR_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2301 	EXP 	Created TR_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2302 	EXP 	Sound TR_Feedback_Coin set volume 1.000
+10.2313 	EXP 	Created Tr_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Tr_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2420 	EXP 	Created TR_Feedback_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='TR_Feedback_Text', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2437 	EXP 	Created TR_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2448 	EXP 	Created TR_Rec_Frame_Penalty = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Penalty', opacity=0.3, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2472 	EXP 	Created TR_Penalty_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='TR_Penalty_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2495 	EXP 	Created Instr_RT_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_RT_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2521 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2533 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2549 	EXP 	Created RT_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2570 	EXP 	Created RT_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2571 	EXP 	Sound CR_Feedback_Coin_Old set volume 1.000
+10.2582 	EXP 	Created RT_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2601 	EXP 	Created RT_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2625 	EXP 	Created Instr_TR_Old_Post_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_TR_Old_Post_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2647 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2658 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2659 	EXP 	Sound TR_Beep set volume 1.000
+10.2670 	EXP 	Created TR_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2689 	EXP 	Created TR_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2690 	EXP 	Sound TR_Feedback_Coin set volume 1.000
+10.2701 	EXP 	Created Tr_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Tr_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2726 	EXP 	Created TR_Feedback_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='TR_Feedback_Text', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2745 	EXP 	Created TR_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2757 	EXP 	Created TR_Rec_Frame_Penalty = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Penalty', opacity=0.3, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2781 	EXP 	Created TR_Penalty_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='TR_Penalty_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2805 	EXP 	Created Instr_CR_New_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_CR_New_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2817 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2827 	EXP 	Created RT_Rec_Frame_Stop = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Stop', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2849 	EXP 	Created RT_Stim_Image_Stop = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Stim_Image_Stop', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2850 	EXP 	Sound CR_Feedback_Coin_Old set volume 1.000
+10.2861 	EXP 	Created RT_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2878 	EXP 	Created RT_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2890 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2901 	EXP 	Created RT_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2920 	EXP 	Created RT_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2921 	EXP 	Sound CR_Feedback_Coin_Old set volume 1.000
+10.2932 	EXP 	Created RT_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='RT_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.2948 	EXP 	Created RT_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='RT_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.2972 	EXP 	Created Instr_TR_Old_Post_text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_TR_Old_Post_text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.2994 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3006 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3007 	EXP 	Sound TR_Beep set volume 1.000
+10.3018 	EXP 	Created TR_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3043 	EXP 	Created TR_Stim_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Stim_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.3044 	EXP 	Sound TR_Feedback_Coin set volume 1.000
+10.3055 	EXP 	Created Tr_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Tr_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3081 	EXP 	Created TR_Feedback_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='TR_Feedback_Text', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3103 	EXP 	Created TR_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.3116 	EXP 	Created TR_Rec_Frame_Penalty = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Penalty', opacity=0.3, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3139 	EXP 	Created TR_Penalty_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='TR_Penalty_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3160 	EXP 	Created Instr_Block_Num_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='Instr_Block_Num_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3172 	EXP 	Created Pre_Trial_Rec_Frame = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Pre_Trial_Rec_Frame', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3173 	EXP 	Sound TR_Beep_Stop set volume 1.000
+10.3184 	EXP 	Created TR_Rec_Frame_Stop = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Stop', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3206 	EXP 	Created TR_Stim_Image_Stop = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Stim_Image_Stop', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.3207 	EXP 	Sound TR_Feedback_Coin set volume 1.000
+10.3218 	EXP 	Created Tr_Rec_Frame_Feedback = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='Tr_Rec_Frame_Feedback', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3241 	EXP 	Created TR_Feedback_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='TR_Feedback_Text', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3263 	EXP 	Created TR_Feedback_Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='TR_Feedback_Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=128, units='height', win=Window(...))
+10.3275 	EXP 	Created TR_Rec_Frame_Penalty = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1.0, name='TR_Rec_Frame_Penalty', opacity=0.3, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+10.3298 	EXP 	Created TR_Penalty_Text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='TR_Penalty_Text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.3589 	EXP 	Imported conditions.xlsx as conditions, 8 conditions, 12 params
+10.3591 	EXP 	Created sequence: sequential, trialTypes=8, nReps=1, seed=None
+10.3595 	EXP 	New trial (rep=0, index=0): OrderedDict([('StimNum', 0), ('Key', 'h'), ('KeyNum', 0), ('Symb', 'media/djnb.png'), ('Symb_R', 'media/djnb_r.png'), ('Symb_G', 'media/djnb_g.png'), ('X_pos', -0.038), ('Y_pos', 0.075), ('Hand', 'media/hand.png'), ('Sound_P', 'media/coin.wav'), ('Sound_N', 'media/buzz.wav'), ('Beep', 'media/beep.wav')])
+10.3858 	EXP 	New trial (rep=0, index=1): OrderedDict([('StimNum', 1), ('Key', 'u'), ('KeyNum', 1), ('Symb', 'media/dnnb.png'), ('Symb_R', 'media/dnnb_r.png'), ('Symb_G', 'media/dnnb_g.png'), ('X_pos', 0.014), ('Y_pos', 0.1), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.3892 	EXP 	New trial (rep=0, index=2): OrderedDict([('StimNum', 2), ('Key', 'i'), ('KeyNum', 2), ('Symb', 'media/dinb.png'), ('Symb_R', 'media/dinb_r.png'), ('Symb_G', 'media/dinb_g.png'), ('X_pos', 0.057), ('Y_pos', 0.08), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.3922 	EXP 	New trial (rep=0, index=3): OrderedDict([('StimNum', 3), ('Key', 'l'), ('KeyNum', 3), ('Symb', 'media/dgnb.png'), ('Symb_R', 'media/dgnb_r.png'), ('Symb_G', 'media/dgnb_g.png'), ('X_pos', 0.1), ('Y_pos', 0.04), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.3948 	EXP 	New trial (rep=0, index=4): OrderedDict([('StimNum', 4), ('Key', 'h'), ('KeyNum', 0), ('Symb', 'media/ddnb.png'), ('Symb_R', 'media/ddnb_r.png'), ('Symb_G', 'media/ddnb_g.png'), ('X_pos', -0.038), ('Y_pos', 0.075), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.3977 	EXP 	New trial (rep=0, index=5): OrderedDict([('StimNum', 5), ('Key', 'u'), ('KeyNum', 1), ('Symb', 'media/dfnb.png'), ('Symb_R', 'media/dfnb_r.png'), ('Symb_G', 'media/dfnb_g.png'), ('X_pos', 0.014), ('Y_pos', 0.1), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.4007 	EXP 	New trial (rep=0, index=6): OrderedDict([('StimNum', 6), ('Key', 'i'), ('KeyNum', 2), ('Symb', 'media/dcnb.png'), ('Symb_R', 'media/dcnb_r.png'), ('Symb_G', 'media/dcnb_g.png'), ('X_pos', 0.057), ('Y_pos', 0.08), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.4041 	EXP 	New trial (rep=0, index=7): OrderedDict([('StimNum', 7), ('Key', 'l'), ('KeyNum', 3), ('Symb', 'media/dmnb.png'), ('Symb_R', 'media/dmnb_r.png'), ('Symb_G', 'media/dmnb_g.png'), ('X_pos', 0.1), ('Y_pos', 0.04), ('Hand', None), ('Sound_P', None), ('Sound_N', None), ('Beep', None)])
+10.4467 	EXP 	Instr_Exp_Text: text = 'Thank you for participating in our study! \n\nThis study has multiple sessions and it will take 40 minutes today. Once you start, you cannot turn off your web browser until you complete the study. \n\nIf you are ready, press (space) to continue.'
+10.4467 	EXP 	Instr_Exp_Text: autoDraw = True
+11.1043 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1051 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1057 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1064 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1070 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1076 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.1083 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+11.1091 	EXP 	New trial (rep=0, index=0): None
+11.1428 	DATA 	Keypress: space
+11.1468 	EXP 	Instr_Exp_Text: autoDraw = False
+11.1468 	EXP 	Instr_CR_New_Text: text = 'Congratulations! Now, we are going to do the real task. \n\n There will be four symbols showing on the screen, one at a time. Each of them maps onto one key from (h,u,i,l). \n\n Your job is to figure out the map. \n\n Think before you press the key. The accuracy is the priority, so go as slow as you need. The more mistaks you make, the longer this block will be.'
+11.1468 	EXP 	Instr_CR_New_Text: autoDraw = True
+11.4520 	DATA 	Keypress: h
+11.4758 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+11.4762 	EXP 	New trial (rep=0, index=0): None
+11.4767 	EXP 	Created sequence: sequential, trialTypes=1, nReps=2000, seed=None
+11.4946 	EXP 	New trial (rep=0, index=0): None
+11.5048 	EXP 	Instr_CR_New_Text: autoDraw = False
+11.5048 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+11.5048 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+11.5048 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+11.5048 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+11.7592 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+11.7592 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+11.7592 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+11.7592 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+11.7592 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+11.7592 	EXP 	RT_Stim_Image_Stop: image = 'media/dgnb.png'
+11.7592 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+11.7592 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+13.7324 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+13.8085 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+13.8085 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+13.8085 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+13.8085 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+13.8085 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+13.8085 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+13.8085 	EXP 	RT_Feedback_Image: image = 'media/dgnb_r.png'
+13.8085 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+13.8085 	EXP 	RT_Feedback_Image: autoDraw = True
+14.8456 	EXP 	New trial (rep=1, index=0): None
+14.8514 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+14.8514 	EXP 	RT_Feedback_Image: autoDraw = False
+14.8514 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+14.8514 	EXP 	RT_Feedback_Image: autoDraw = False
+14.8514 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+14.8514 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+14.8514 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+14.8514 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+15.0802 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+15.0802 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+15.0802 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+15.0802 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+15.0802 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+15.0802 	EXP 	RT_Stim_Image_Stop: image = 'media/dgnb.png'
+15.0802 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+15.0802 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+17.0645 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+17.1101 	DATA 	Keypress: h
+17.1141 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+17.1141 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+17.1141 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+17.1141 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+17.1141 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+17.1141 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+17.1141 	EXP 	RT_Feedback_Image: image = 'media/dgnb_r.png'
+17.1141 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+17.1141 	EXP 	RT_Feedback_Image: autoDraw = True
+18.1596 	EXP 	New trial (rep=2, index=0): None
+18.1664 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+18.1664 	EXP 	RT_Feedback_Image: autoDraw = False
+18.1664 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+18.1664 	EXP 	RT_Feedback_Image: autoDraw = False
+18.1664 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+18.1664 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+18.1664 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+18.1664 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+18.3784 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+18.3784 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+18.3784 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+18.3784 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+18.3784 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+18.3784 	EXP 	RT_Stim_Image_Stop: image = 'media/dgnb.png'
+18.3784 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+18.3784 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+18.8518 	DATA 	Keypress: l
+18.8558 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+18.8558 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+18.8558 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+18.8558 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+18.8558 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+18.8558 	EXP 	RT_Feedback_Image: image = 'media/dgnb_g.png'
+18.8558 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+18.8558 	EXP 	RT_Feedback_Image: autoDraw = True
+19.1644 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+19.1644 	EXP 	RT_Feedback_Image: autoDraw = False
+19.3184 	EXP 	New trial (rep=3, index=0): None
+19.3243 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+19.3243 	EXP 	RT_Feedback_Image: autoDraw = False
+19.3243 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+19.3243 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+19.3243 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+19.3243 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+19.5481 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+19.5481 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+19.5481 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+19.5481 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+19.5481 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+19.5481 	EXP 	RT_Stim_Image_Stop: image = 'media/dinb.png'
+19.5481 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+19.5481 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+21.5726 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+21.5726 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+21.5726 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+21.5726 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+21.5726 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+21.5726 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+21.5726 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+21.5726 	EXP 	RT_Feedback_Image: image = 'media/dinb_g.png'
+21.5726 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+21.5726 	EXP 	RT_Feedback_Image: autoDraw = True
+21.8823 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+21.8823 	EXP 	RT_Feedback_Image: autoDraw = False
+22.0268 	EXP 	New trial (rep=4, index=0): None
+22.0326 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+22.0326 	EXP 	RT_Feedback_Image: autoDraw = False
+22.0326 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+22.0326 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+22.0326 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+22.0326 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+22.2610 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+22.2610 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+22.2610 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+22.2610 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+22.2610 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+22.2610 	EXP 	RT_Stim_Image_Stop: image = 'media/dgnb.png'
+22.2610 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+22.2610 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+23.8423 	DATA 	Keypress: l
+23.8461 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+23.8461 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+23.8461 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+23.8461 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+23.8461 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+23.8461 	EXP 	RT_Feedback_Image: image = 'media/dgnb_g.png'
+23.8461 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+23.8461 	EXP 	RT_Feedback_Image: autoDraw = True
+24.1489 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+24.1489 	EXP 	RT_Feedback_Image: autoDraw = False
+24.2934 	EXP 	New trial (rep=5, index=0): None
+24.2999 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+24.2999 	EXP 	RT_Feedback_Image: autoDraw = False
+24.2999 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+24.2999 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+24.2999 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+24.2999 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+24.5281 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+24.5281 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+24.5281 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+24.5281 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+24.5281 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+24.5281 	EXP 	RT_Stim_Image_Stop: image = 'media/dfnb.png'
+24.5281 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+24.5281 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+26.5146 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+26.5585 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+26.5585 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+26.5585 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+26.5585 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+26.5585 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+26.5585 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+26.5585 	EXP 	RT_Feedback_Image: image = 'media/dfnb_g.png'
+26.5585 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+26.5585 	EXP 	RT_Feedback_Image: autoDraw = True
+26.8646 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+26.8646 	EXP 	RT_Feedback_Image: autoDraw = False
+27.0294 	EXP 	New trial (rep=6, index=0): None
+27.0359 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+27.0359 	EXP 	RT_Feedback_Image: autoDraw = False
+27.0359 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+27.0359 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+27.0359 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+27.0359 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+27.2566 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+27.2566 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+27.2566 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+27.2566 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+27.2566 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+27.2566 	EXP 	RT_Stim_Image_Stop: image = 'media/dmnb.png'
+27.2566 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+27.2566 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+29.2490 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+29.3045 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+29.3045 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+29.3045 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+29.3045 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+29.3045 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+29.3045 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+29.3045 	EXP 	RT_Feedback_Image: image = 'media/dmnb_g.png'
+29.3045 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+29.3045 	EXP 	RT_Feedback_Image: autoDraw = True
+29.6153 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+29.6153 	EXP 	RT_Feedback_Image: autoDraw = False
+29.7769 	EXP 	New trial (rep=7, index=0): None
+29.7834 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+29.7834 	EXP 	RT_Feedback_Image: autoDraw = False
+29.7834 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+29.7834 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+29.7834 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+29.7834 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+29.9982 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+29.9982 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+29.9982 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+29.9982 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+29.9982 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+29.9982 	EXP 	RT_Stim_Image_Stop: image = 'media/dnnb.png'
+29.9982 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+29.9982 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+32.0349 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+32.0349 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+32.0349 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+32.0349 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+32.0349 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+32.0349 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+32.0349 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+32.0349 	EXP 	RT_Feedback_Image: image = 'media/dnnb_r.png'
+32.0349 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+32.0349 	EXP 	RT_Feedback_Image: autoDraw = True
+33.0796 	EXP 	New trial (rep=8, index=0): None
+33.0858 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+33.0858 	EXP 	RT_Feedback_Image: autoDraw = False
+33.0858 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+33.0858 	EXP 	RT_Feedback_Image: autoDraw = False
+33.0858 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+33.0858 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+33.0858 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+33.0858 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+33.3115 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+33.3115 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+33.3115 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+33.3115 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+33.3115 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+33.3115 	EXP 	RT_Stim_Image_Stop: image = 'media/dnnb.png'
+33.3115 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+33.3115 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+34.0283 	DATA 	Keypress: u
+34.0324 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+34.0324 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+34.0324 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+34.0324 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+34.0324 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+34.0324 	EXP 	RT_Feedback_Image: image = 'media/dnnb_g.png'
+34.0324 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+34.0324 	EXP 	RT_Feedback_Image: autoDraw = True
+34.3325 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+34.3325 	EXP 	RT_Feedback_Image: autoDraw = False
+34.4808 	EXP 	New trial (rep=9, index=0): None
+34.4869 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+34.4869 	EXP 	RT_Feedback_Image: autoDraw = False
+34.4869 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+34.4869 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+34.4869 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+34.4869 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+34.7010 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+34.7010 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+34.7010 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+34.7010 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+34.7010 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+34.7010 	EXP 	RT_Stim_Image_Stop: image = 'media/ddnb.png'
+34.7010 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+34.7010 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+36.6980 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+36.7362 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+36.7362 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+36.7362 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+36.7362 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+36.7362 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+36.7362 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+36.7362 	EXP 	RT_Feedback_Image: image = 'media/ddnb_g.png'
+36.7362 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+36.7362 	EXP 	RT_Feedback_Image: autoDraw = True
+37.0482 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+37.0482 	EXP 	RT_Feedback_Image: autoDraw = False
+37.2158 	EXP 	New trial (rep=10, index=0): None
+37.2225 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+37.2225 	EXP 	RT_Feedback_Image: autoDraw = False
+37.2225 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+37.2225 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+37.2225 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+37.2225 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+37.4456 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+37.4456 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+37.4456 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+37.4456 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+37.4456 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+37.4456 	EXP 	RT_Stim_Image_Stop: image = 'media/dcnb.png'
+37.4456 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+37.4456 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+39.4316 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+39.4756 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+39.4756 	EXP 	RT_Rec_Frame_Stop: autoDraw = False
+39.4756 	EXP 	RT_Stim_Image_Stop: autoDraw = False
+39.4756 	EXP 	RT_Rec_Frame_Feedback: opacity = 1.0
+39.4756 	EXP 	RT_Rec_Frame_Feedback: lineColor = '[1. 1. 1.] (rgb)'
+39.4756 	EXP 	RT_Rec_Frame_Feedback: lineWidth = 6.0
+39.4756 	EXP 	RT_Feedback_Image: image = 'media/dcnb_g.png'
+39.4756 	EXP 	RT_Rec_Frame_Feedback: autoDraw = True
+39.4756 	EXP 	RT_Feedback_Image: autoDraw = True
+39.7825 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+39.7825 	EXP 	RT_Feedback_Image: autoDraw = False
+39.9169 	EXP 	New trial (rep=11, index=0): None
+39.9227 	EXP 	RT_Rec_Frame_Feedback: autoDraw = False
+39.9227 	EXP 	RT_Feedback_Image: autoDraw = False
+39.9227 	EXP 	Pre_Trial_Rec_Frame: opacity = 1.0
+39.9227 	EXP 	Pre_Trial_Rec_Frame: lineColor = '[1. 1. 1.] (rgb)'
+39.9227 	EXP 	Pre_Trial_Rec_Frame: lineWidth = 6.0
+39.9227 	EXP 	Pre_Trial_Rec_Frame: autoDraw = True
+40.1353 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+40.1353 	EXP 	Pre_Trial_Rec_Frame: autoDraw = False
+40.1353 	EXP 	RT_Rec_Frame_Stop: opacity = 1.0
+40.1353 	EXP 	RT_Rec_Frame_Stop: lineColor = '[1. 1. 1.] (rgb)'
+40.1353 	EXP 	RT_Rec_Frame_Stop: lineWidth = 6.0
+40.1353 	EXP 	RT_Stim_Image_Stop: image = 'media/dnnb.png'
+40.1353 	EXP 	RT_Rec_Frame_Stop: autoDraw = True
+40.1353 	EXP 	RT_Stim_Image_Stop: autoDraw = True
+41.5044 	EXP 	window1: mouseVisible = True
