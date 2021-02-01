@@ -121,9 +121,9 @@ psychoJS.start({
     {'name': 'media/dmnb.png', 'path': './media/dmnb.png'},
     {'name': 'media/dmnb_g.png', 'path': './media/dmnb_g.png'},
     {'name': 'media/dmnb_r.png', 'path': './media/dmnb_r.png'},
-    {'name': 'media/coin.wav', 'path': './media/coin.wav'},
-    {'name': 'media/buzz.wav', 'path': './media/buzz.wav'},
-    {'name': 'media/beep.wav', 'path': './media/beep.wav'}
+    {'name': 'media/coin.mp3', 'path': './media/coin.mp3'},
+    {'name': 'media/buzz.mp3', 'path': './media/buzz.mp3'},
+    {'name': 'media/beep.mp3', 'path': './media/beep.mp3'}
   ]
   });
 
