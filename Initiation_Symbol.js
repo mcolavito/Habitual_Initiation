@@ -3580,6 +3580,7 @@ function Instr_RT_HandRoutineEnd(trials) {
 var trial_count;
 var repeat_count;
 var tr_timing_good;
+var trial_count_item;
 var sum_corr;
 var seq_stimnum_hand;
 var seq_stimnum;
@@ -5809,7 +5810,6 @@ function Criterion_DetRoutineEnd(trials) {
 
 
 var _Instr_TR_Old_Pre_Press_allKeys;
-var trial_count_item;
 var Instr_TR_Old_PreComponents;
 function Instr_TR_Old_PreRoutineBegin(trials) {
   return function () {
