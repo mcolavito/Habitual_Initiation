@@ -197,17 +197,17 @@ var tr_block_hand = 4;
 var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
-var num_trials = 8;
+var num_trials = 16;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 1;
-var rt_hand_yes = 1;
-var cr_old_yes = 1;
-var cr_new_yes = 1;
-var rt_yes = 1;
+var tr_hand_yes = 0;
+var rt_hand_yes = 0;
+var cr_old_yes = 0;
+var cr_new_yes = 0;
+var rt_yes = 0;
 var tr_old_pre_yes = 1;
 var tr_old_post_yes = 1;
 var tr_new_yes = 1;
@@ -3604,6 +3604,7 @@ function Creat_StimSeqRoutineBegin(trials) {
     repeat_count = 0;
     tr_timing_good = 0;
     sum_corr = [0, 0, 0, 0, 0, 0, 0, 0];
+    trial_count_item = [0, 0, 0, 0, 0, 0, 0, 0];
     if ((stim_type === "Hand")) {
         seq_stimnum_hand = [];
         seq_handx = [];
@@ -5825,7 +5826,6 @@ function Instr_TR_Old_PreRoutineBegin(trials) {
     stim_type = "Symb";
     remap = 0;
     block_count = 0;
-    trial_count_item = [0, 0, 0, 0, 0, 0, 0, 0];
     symb = symb_map;
     symb_g = symb_g_map;
     symb_r = symb_r_map;
@@ -6490,7 +6490,7 @@ function Instr_TR_Old_PostRoutineBegin(trials) {
     stim_type = "Symb";
     remap = 0;
     block_count = 0;
-    trial_count_item = [0, 0, 0, 0, 0, 0, 0, 0];
+    
     symb = symb_map;
     symb_g = symb_g_map;
     symb_r = symb_r_map;
@@ -6963,7 +6963,6 @@ function Instr_TR_NewRoutineBegin(trials) {
     stim_type = "Symb";
     remap = 1;
     block_count = 0;
-    trial_count_item = [0, 0, 0, 0, 0, 0, 0, 0];
     if (grp_stop === 1) {
         symb = symb_map;
         symb_g = symb_g_map;
