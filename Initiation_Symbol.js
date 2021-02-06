@@ -194,7 +194,7 @@ var symb_r_map = [];
 var symb_r_remap = [];
 ////////////////////////////////////
 var tr_block_hand = 4;
-var num_trials_hand = 10;
+var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
 var num_trials = 8;
