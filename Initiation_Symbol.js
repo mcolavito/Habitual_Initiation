@@ -25,11 +25,12 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'Initiation_Symbol';  // from the Builder filename that created this script
+// let expInfo = {'participant': '', 'session': ''};
 let expInfo = {'participant': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
-  text: "Welcome. Press 'Ok' to the instruction. Please read it carefully.",
+  text: "Welcome. Please click 'Ok' to continue.",
   dictionary: expInfo,
   title: expName
 }));
@@ -197,21 +198,24 @@ var tr_block_hand = 4;
 var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
-var num_trials = 16;
+var num_trials = 96;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 0;
-var rt_hand_yes = 0;
-var cr_old_yes = 0;
-var cr_new_yes = 0;
-var rt_yes = 0;
+var tr_hand_yes = 1;
+var rt_hand_yes = 1;
+var cr_old_yes = 1;
+var cr_new_yes = 1;
+var rt_yes = 1;
 var tr_old_pre_yes = 1;
 var tr_old_post_yes = 1;
 var tr_new_yes = 1;
 //////////////////////////////////////
+
+var pre = 0;
+var post = 0;
 
 var timing_tol_early = 0.1;
 var timing_tol_late = 0.075;
@@ -356,16 +360,16 @@ function experimentInit() {
   //determine which group participants are in
   if ((rng1 < 0.5)) {
       grp_stop = 1;
-      tr_block_new_stop = 1;
+      tr_block_new_stop = 6;
   } else {
       grp_swap = 1;
-      tr_block_new_swap = 1;
+      tr_block_new_swap = 6;
   }
-  
+
   // session # determines which blocks they do
-  if ((session === 1)) {
-      rt_block = 1;
-  }
+  //if ((session === 1)) {
+  //    rt_block = 1;
+  //}
   
   // randomize prep-time so that prep-time for each symbol spread over a good range
   for (var i = 0, _pj_a = 12; (i < _pj_a); i += 1) {
@@ -3177,17 +3181,25 @@ function Init_StimRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
+
+    instr_end_exp_text = `Great job! You have completed the task.
+    
+Press (space) to proceed so that your data can be saved. The saving process may take up to 1 minute.
+
+After the data are saved, click 'OK' to exit and close the webpage.`
+    ;
+
     instr_exp_text = `Thank you for participating in our study!
     
 This study will take about 1 hour and 30 minutes. 
 
-Once you start, you can take a break between rounds, BUT you cannot turn off your web browser until you complete the study.
+Once you start, you can take a break between rounds, Please DO NOT turn off your web browser until you complete the task, unless you decide to withdraw from this study.
     
 
 
 Press (space) to continue.`
     ;
-    instr_rt_text_hand = `The upcoming three blocks are used to be familiar with the task.
+    instr_rt_text_hand = `The upcoming 3 blocks are used to help you get familiar with the task.
     
 With your Right hand, place your Index, Middle, Ring, and Pinky fingers on (H, U, I, L) respectively. Your fingers will rest on these keys for the entirety of the experiment.
     
@@ -3195,38 +3207,43 @@ You will see a hand appear on the screen. One of the fingers on the screen will 
     
 
 
-Press one of (H, U, I, L) to continue.`
+Press (H, U, I, or L) to continue.`
     ;
     instr_tr_text_hand = `Great Job!
     
-In the following practice, you will hear 4 beeps. You need to press the corresponding finger ON the fourth beep. 
+In the following blocks, you will hear 4 beeps. You need to press the corresponding finger ON the fourth beep. 
 
 
-Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers on the fourth beep.
-    
-Let’s practice for 2 blocks! 
+Sometimes, the finger will light up at the very last second. You will not have enough time to know which finger to press. In this case, MAKE A GUESS. Always press one of your fingers ON the fourth beep.
 
 
-Press one of (H, U, I, L) to continue.`
+There will be at least 2 blocks, depending on how well you press ON the fourth beep.
+
+
+Press (H, U, I, or L) to continue.`
     ;
     instr_cr_old_text = `Good Job! You are now ready for the tasks!
     
-You will see eight symbols on the screen, one at a time. Each symbol corresponds to one of (H, U, I, L). Your job is to figure out which symbol corresponds with which key.
+In the upcoming block, you will see eight symbols on the screen, one at a time. Each symbol corresponds to one of (H, U, I, L). 
+
+Your job is to figure out which symbol corresponds with which key.
 
 
 ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
     
 
 
-Ready? Press one of (H, U, I, L) to continue.`
+Ready? Press (H, U, I, or L) to continue.`
     ;
     if ((session === 1)) {
-        instr_rt_text = `Now you are going to practice the symbol-key map you learned. Your job is to press the corresponding key as quickly and as accurately as possible.
+        instr_rt_text = `Now you are going to practice the symbol-key map you learned. 
+        
+Your job is to press the corresponding key as quickly and as accurately as possible.
     
 There will be ${rt_block} blocks with short breaks in between.
     
 
-Whenever you are ready, press one of (H, U, I, L) to start.`
+Whenever you are ready, press (H, U, I, or L) to start.`
     ;
     } else {
         if ((1 < session)) {
@@ -3234,28 +3251,32 @@ Whenever you are ready, press one of (H, U, I, L) to start.`
     
 Remember, your job is to press the corresponding key as quickly and accurately as you can.
     
-Whenever you are ready, press one of (H, U, I, L) to start.`
+Whenever you are ready, press (H, U, I, or L) to start.`
     ;
         }
     }
     instr_tr_old_pre_text = `Good job so far.
     
-In the following 2 blocks, press the corresponding key ON the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following ${tr_block_old} blocks, use the symbol-key map you learned. Press the corresponding key ON the fourth beep. 
+
+Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
 
-Press one of (H, U, I, L) to start.`
+Press (H, U, I, or L) to start.`
     ;
     instr_tr_old_post_text = `Great job.
     
-In the following 2 blocks, you will hear four beeps again. Press the corresponding key ON the fourth beep. Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
+In the following ${tr_block_old} blocks, use the symbol-key map you practices. Press the corresponding key ON the fourth beep. 
+
+Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
     
 
-Press one of (H, U, I, L) to start.`
+Press (H, U, I, or L) to start.`
     ;
     if ((grp_stop === 1)) {
-        instr_cr_new_text = `Congratulations!
+        instr_cr_new_text = `Great job.
     
-Now, you will see the same eight symbols, but this time some of them may no longer correspond with a key (H, U, I, L).
+In next block, you will see the same eight symbols, but this time some of them may no longer correspond with a key (H, U, I, L).
         
 Your job is to figure out which are those symbols and DO NOT PRESS ANY KEY when they appear. Instead, simply wait for 2 seconds.
         
@@ -3263,61 +3284,64 @@ Your job is to figure out which are those symbols and DO NOT PRESS ANY KEY when 
 ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
         
         
-Press one of (H, U, I, L) to start.`
+Press (H, U, I, or L) to start.`
     ;
     } else {
         if ((grp_swap === 1)) {
-            instr_cr_new_text = `Congratulations!
+            instr_cr_new_text = `Great job.
     
-Now, you will see the same eight symbols, but this time they may correspond with different key (H, U, I, L).
+In the next block, you will see the same eight symbols, but this time they may correspond with a different key (H, U, I, L).
 
 Your job is to figure out the new association between the symbols and the keys.
 
 
-ACCURACY is the priority, so go as slowly as you need to. The more mistaks you make, the longer this block will take.
+ACCURACY is the priority, so go as slowly as you need to. The more mistakes you make, the longer this block will take.
 
 
-Press one of (H, U, I, L) to start.`
+Press (H, U, I, or L) to start.`
     ;
         }
     }
-    if ((grp_stop === 1)) {
-        instr_tr_new_text = `In the following set of blocks, use the NEW symbol-key map you just learned, press the corresponding key on the fourth beep. 
+    if ((grp_swap === 1)) {
+        instr_tr_new_text = `Great job. We are almost there!
+
+In the last ${tr_block_new_swap} blocks, use the NEW symbol-key map you just learned: 
+Press the corresponding key ON the fourth beep. 
             
 Remember, the symbol may show up very late. In this case, MAKE A GUESS. This task is designed to be difficult, so it is okay to make a guess.
-              
-These are the last 6 blocks for this experiment.
+
             
         
-Press one of (H, U, I, L) to start.`
+Press (H, U, I, or L) to start.`
     ;
     } else {
-        if ((grp_swap === 1)) {
-            instr_tr_new_text = `In the following set of blocks, use the NEW symbol-key map you just learned, press the corresponding key on the fourth beep. 
-
-If you see a symbol that requires a response, respond ON the FOURTH beep.             
-
+        if ((grp_stop === 1)) {
+            instr_tr_new_text = `Great job. We are almost there!
+            
+In the last ${tr_block_new_stop} blocks, use the NEW symbol-key map you just learned:
+If you see a symbol that requires a response, press the corresponding key ON the fourth beep.             
 If you see a symbol that does NOT require a response, DO NOT PRESS ANYTHING.
 
 
-Remember, the symbol may show up very late. In this case, MAKE A GUESS.
+Remember, the symbol may show up very late. In this case, MAKE A GUESS. If you decide to press, remember to respond ON the fourth beep.
 
-If you decide to press, remember to respond ON the FOURTH beep.
-      
-These are the last 6 blocks for this experiment.
-    
+This task is designed to be difficult, so it is okay to make a guess.
 
-Press one of (H, U, I, L) to start.`
+
+
+
+
+Press (H, U, I, or L) to start.`
     ;
         }
     }
     penalty_toolate_text = `Response was too late.
 2 second penalty.
-After 2 second, press one of (H, U, I, L) to continue.`
+After 2 second, press (H, U, I, or L) to continue.`
     ;
     penalty_tooearly_text = `Response was too early.
 2 second penalty.
-After 2 second, press one of (H, U, I, L) to continue.`
+After 2 second, press (H, U, I, or L) to continue.`
     ;
     feedback_early_text = `little early`;
     feedback_late_text = `little late`;
@@ -3329,7 +3353,6 @@ After 2 second, press one of (H, U, I, L) to continue.`
     return Scheduler.Event.NEXT;
   };
 }
-
 
 var _Instr_Exp_Key_allKeys;
 var Instr_ExpComponents;
@@ -3579,8 +3602,8 @@ function Instr_RT_HandRoutineEnd(trials) {
 
 var trial_count;
 var repeat_count;
-var tr_timing_good;
 var trial_count_item;
+var tr_timing_good;
 var sum_corr;
 var seq_stimnum_hand;
 var seq_stimnum;
@@ -3674,29 +3697,9 @@ function Creat_StimSeqRoutineBegin(trials) {
     
     if (((block_type !== "CR") && (stim_type === "Symb"))) {
         count = 0;
-        while ((count < (num_trials / 40))) {
+        while ((count < (num_trials / 16))) {
             util.shuffle(x16);
             for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
-                i = _pj_a[_pj_c];
-                seq_stimnum.push(stimnum[i]);
-                seq_key.push(key[i]);
-                seq_symb.push(symb[i]);
-                seq_symb_g.push(symb_g[i]);
-                seq_symb_r.push(symb_r[i]);
-                seq_keynum.push(keynum[i]);
-            }
-            util.shuffle(x16);
-            for (var i, _pj_c = 0, _pj_a = x16, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
-                i = _pj_a[_pj_c];
-                seq_stimnum.push(stimnum[i]);
-                seq_key.push(key[i]);
-                seq_symb.push(symb[i]);
-                seq_symb_g.push(symb_g[i]);
-                seq_symb_r.push(symb_r[i]);
-                seq_keynum.push(keynum[i]);
-            }
-            util.shuffle(x8_new);
-            for (var i, _pj_c = 0, _pj_a = x8_new, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 i = _pj_a[_pj_c];
                 seq_stimnum.push(stimnum[i]);
                 seq_key.push(key[i]);
@@ -3789,13 +3792,13 @@ function Pre_Trial_HandRoutineBegin(trials) {
     t = 0;
     Pre_Trial_HandClock.reset(); // clock
     frameN = -1;
+
     // update component parameters for each repeat
     Pre_Trial_Rec_Frame_Hand.setOpacity(rec_frame_opacity);
     Pre_Trial_Rec_Frame_Hand.setLineColor(new util.Color(rec_frame_color));
     Pre_Trial_Rec_Frame_Hand.setLineWidth(rec_wd);
     Pre_Trial_HandShape.setImage(hand_shape);
     x_item = seq_handx[trial_count];
-    console.log(seq_handx.length);
     key_item = seq_key_hand[trial_count];
     y_item = seq_handy[trial_count];
     keynum_item = seq_keynum_hand[trial_count];
@@ -3905,6 +3908,8 @@ function Pre_Trial_HandRoutineEnd(trials) {
     psychoJS.experiment.addData("stim_type", stim_type);
     psychoJS.experiment.addData("key", key_item);
     psychoJS.experiment.addData("block_type", block_type);
+    psychoJS.experiment.addData("tr_old_pre", pre);
+    psychoJS.experiment.addData("tr_old_post", post);
     psychoJS.experiment.addData("remap", remap);
     psychoJS.experiment.addData("repeat_count", repeat_count);
     psychoJS.experiment.addData("trial_Count", trial_count);
@@ -4391,7 +4396,7 @@ function Instr_Block_NumRoutineBegin(trials) {
     Instr_Block_NumClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    Instr_Block_Num_Text.setText((('Block ' + block_count) + '\nPress any key to start'));
+    Instr_Block_Num_Text.setText((('Block ' + block_count) + '\nPress (H, U, I, or L) to start'));
     Instr_Block_Num_Press.keys = undefined;
     Instr_Block_Num_Press.rt = undefined;
     _Instr_Block_Num_Press_allKeys = [];
@@ -4429,7 +4434,7 @@ function Instr_Block_NumRoutineEachFrame(trials) {
 
     
     // *Instr_Block_Num_Press* updates
-    if (t >= 0.0 && Instr_Block_Num_Press.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && Instr_Block_Num_Press.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       Instr_Block_Num_Press.tStart = t;  // (not accounting for frame time here)
       Instr_Block_Num_Press.frameNStart = frameN;  // exact frame index
@@ -5396,6 +5401,8 @@ function Pre_TrialRoutineEnd(trials) {
     psychoJS.experiment.addData("stim_type", stim_type);
     psychoJS.experiment.addData("key", key_item);
     psychoJS.experiment.addData("block_type", block_type);
+    psychoJS.experiment.addData("tr_old_pre", pre);
+    psychoJS.experiment.addData("tr_old_post", post);
     psychoJS.experiment.addData("remap", remap);
     psychoJS.experiment.addData("repeat_count", repeat_count);
     psychoJS.experiment.addData("trial_Count", trial_count);
@@ -5826,6 +5833,7 @@ function Instr_TR_Old_PreRoutineBegin(trials) {
     stim_type = "Symb";
     remap = 0;
     block_count = 0;
+    pre = 1;
     symb = symb_map;
     symb_g = symb_g_map;
     symb_r = symb_r_map;
@@ -5945,12 +5953,12 @@ function TR_Enter_TrialsRoutineBegin(trials) {
     TR_Enter_TrialsClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    TR_Beep = new sound.Sound({
+    TR_Beep_Hand = new sound.Sound({
     win: psychoJS.window,
     value: beep,
     secs: -1,
     });
-    TR_Beep.setVolume(1);
+    TR_Beep_Hand.setVolume(1);
     routineTimer.reset(time_limit);
     tr_press_early = 0;
     tr_press_late = 0;
@@ -5968,7 +5976,7 @@ function TR_Enter_TrialsRoutineBegin(trials) {
     _TR_Press_allKeys = [];
     // keep track of which components have finished
     TR_Enter_TrialsComponents = [];
-    TR_Enter_TrialsComponents.push(TR_Beep);
+    TR_Enter_TrialsComponents.push(TR_Beep_Hand);
     TR_Enter_TrialsComponents.push(TR_Rec_Frame);
     TR_Enter_TrialsComponents.push(TR_Stim_Image);
     TR_Enter_TrialsComponents.push(TR_Press);
@@ -5991,18 +5999,18 @@ function TR_Enter_TrialsRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop TR_Beep
-    if (t >= 0.0 && TR_Beep.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && TR_Beep_Hand.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      TR_Beep.tStart = t;  // (not accounting for frame time here)
-      TR_Beep.frameNStart = frameN;  // exact frame index
+      TR_Beep_Hand.tStart = t;  // (not accounting for frame time here)
+      TR_Beep_Hand.frameNStart = frameN;  // exact frame index
       
-      psychoJS.window.callOnFlip(function(){ TR_Beep.play(); });  // screen flip
-      TR_Beep.status = PsychoJS.Status.STARTED;
+      psychoJS.window.callOnFlip(function(){ TR_Beep_Hand.play(); });  // screen flip
+      TR_Beep_Hand.status = PsychoJS.Status.STARTED;
     }
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (t >= frameRemains && TR_Beep.status === PsychoJS.Status.STARTED) {
+    if (t >= frameRemains && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
       //TR_Beep.stop();  // stop the sound (if longer than duration)
-      TR_Beep.status = PsychoJS.Status.FINISHED;
+      TR_Beep_Hand.status = PsychoJS.Status.FINISHED;
     }
     
     // *TR_Rec_Frame* updates
@@ -6490,7 +6498,7 @@ function Instr_TR_Old_PostRoutineBegin(trials) {
     stim_type = "Symb";
     remap = 0;
     block_count = 0;
-    
+    post = 1;
     symb = symb_map;
     symb_g = symb_g_map;
     symb_r = symb_r_map;
@@ -6886,7 +6894,7 @@ function RT_Enter_Trial_StopRoutineEnd(trials) {
             feedback_image = symb_r_item;
             feedback_dur = 1;
         }
-    } else {
+      } else {
         if ((RT_Press_Stop.keys !== undefined)) {
           if (RT_Press_Stop.corr) {
               corr = 1;
@@ -7093,12 +7101,12 @@ function TR_Enter_Trials_StopRoutineBegin(trials) {
     TR_Enter_Trials_StopClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    TR_Beep_Stop = new sound.Sound({
+    TR_Beep_Hand = new sound.Sound({
     win: psychoJS.window,
     value: beep,
     secs: -1,
     });
-    TR_Beep_Stop.setVolume(1);
+    TR_Beep_Hand.setVolume(1);
     routineTimer.reset(time_limit);
     tr_text = 0;
     tr_sound = 0;
@@ -7119,7 +7127,7 @@ function TR_Enter_Trials_StopRoutineBegin(trials) {
     _TR_Press_Stop_allKeys = [];
     // keep track of which components have finished
     TR_Enter_Trials_StopComponents = [];
-    TR_Enter_Trials_StopComponents.push(TR_Beep_Stop);
+    TR_Enter_Trials_StopComponents.push(TR_Beep_Hand);
     TR_Enter_Trials_StopComponents.push(TR_Rec_Frame_Stop);
     TR_Enter_Trials_StopComponents.push(TR_Stim_Image_Stop);
     TR_Enter_Trials_StopComponents.push(TR_Press_Stop);
@@ -7142,19 +7150,19 @@ function TR_Enter_Trials_StopRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop TR_Beep_Stop
-    if (t >= 0.0 && TR_Beep_Stop.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && TR_Beep_Hand.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      TR_Beep_Stop.tStart = t;  // (not accounting for frame time here)
-      TR_Beep_Stop.frameNStart = frameN;  // exact frame index
+      TR_Beep_Hand.tStart = t;  // (not accounting for frame time here)
+      TR_Beep_Hand.frameNStart = frameN;  // exact frame index
       
-      psychoJS.window.callOnFlip(function(){ TR_Beep_Stop.play(); });  // screen flip
-      TR_Beep_Stop.status = PsychoJS.Status.STARTED;
+      psychoJS.window.callOnFlip(function(){ TR_Beep_Hand.play(); });  // screen flip
+      TR_Beep_Hand.status = PsychoJS.Status.STARTED;
     }
     
     frameRemains = time_limit  - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (t >= frameRemains && TR_Beep_Stop.status === PsychoJS.Status.STARTED) {
+    if (t >= frameRemains && TR_Beep_Hand.status === PsychoJS.Status.STARTED) {
       //TR_Beep_Stop.stop();  // stop the sound (if longer than duration)
-      TR_Beep_Stop.status = PsychoJS.Status.FINISHED;
+      TR_Beep_Hand.status = PsychoJS.Status.FINISHED;
     }
     
     // *TR_Rec_Frame_Stop* updates
