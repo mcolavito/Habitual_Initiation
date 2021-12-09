@@ -6372,9 +6372,21 @@ function Instr_RTRoutineBegin(trials) {
             block_count = 5;
         }
     }
-    symb = symb_map;
-    symb_g = symb_g_map;
-    symb_r = symb_r_map;
+
+    //test//
+    if (block_count < 1) {
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
+    } else {
+        if (block_count % 2 === 0) {
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+            remap = 1;
+        }
+    }
+
 
     // keep track of which components have finished
     Instr_RTComponents = [];
