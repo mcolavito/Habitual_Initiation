@@ -198,7 +198,7 @@ var tr_block_hand = 4;
 var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
-var num_trials = 96;
+var num_trials = 10;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
@@ -2202,6 +2202,7 @@ function RT_IterLoopBegin(thisScheduler) {
     thisScheduler.add(Pre_TrialRoutineBegin(snapshot));
     thisScheduler.add(Pre_TrialRoutineEachFrame(snapshot));
     thisScheduler.add(Pre_TrialRoutineEnd(snapshot));
+    //edit here//
     thisScheduler.add(RT_Enter_TrialRoutineBegin(snapshot));
     thisScheduler.add(RT_Enter_TrialRoutineEachFrame(snapshot));
     thisScheduler.add(RT_Enter_TrialRoutineEnd(snapshot));
