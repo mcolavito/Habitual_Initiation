@@ -6383,7 +6383,6 @@ function Instr_RTRoutineBegin(trials) {
         symb = symb_map;
         symb_g = symb_g_map;
         symb_r = symb_r_map;
-        }
     }
 
 
