@@ -6373,18 +6373,6 @@ function Instr_RTRoutineBegin(trials) {
         }
     }
 
-    //test//
-    if (block_count > 1 && block_count % 2 == 0) {
-        symb = symb_remap;
-        symb_g = symb_g_remap;
-        symb_r = symb_r_remap;
-        //remap = 1;
-    } else {
-        symb = symb_map;
-        symb_g = symb_g_map;
-        symb_r = symb_r_map;
-    }
-
 
     // keep track of which components have finished
     Instr_RTComponents = [];
@@ -6777,6 +6765,18 @@ function RT_Enter_Trial_StopRoutineBegin(trials) {
     RT_Enter_Trial_StopComponents.push(RT_Rec_Frame_Stop);
     RT_Enter_Trial_StopComponents.push(RT_Stim_Image_Stop);
     RT_Enter_Trial_StopComponents.push(RT_Press_Stop);
+
+    //test//doesnt seem like the right place for this
+    if (block_count > 1 && block_count % 2 == 0) {
+        symb = symb_remap;
+        symb_g = symb_g_remap;
+        symb_r = symb_r_remap;
+        //remap = 1;
+    } else {
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
+    }
 
     for (const thisComponent of RT_Enter_Trial_StopComponents)
       if ('status' in thisComponent)
