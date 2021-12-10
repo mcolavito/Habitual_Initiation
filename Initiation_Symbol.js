@@ -6766,18 +6766,6 @@ function RT_Enter_Trial_StopRoutineBegin(trials) {
     RT_Enter_Trial_StopComponents.push(RT_Stim_Image_Stop);
     RT_Enter_Trial_StopComponents.push(RT_Press_Stop);
 
-    //test//doesnt seem like the right place for this
-    if (block_count > 1 && block_count % 2 == 0) {
-        symb = symb_remap;
-        symb_g = symb_g_remap;
-        symb_r = symb_r_remap;
-        //remap = 1;
-    } else {
-        symb = symb_map;
-        symb_g = symb_g_map;
-        symb_r = symb_r_map;
-    }
-
     for (const thisComponent of RT_Enter_Trial_StopComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
@@ -6839,7 +6827,19 @@ function RT_Enter_Trial_StopRoutineEachFrame(trials) {
     frameRemains = 0.0 + stop_tol - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (RT_Press_Stop.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       RT_Press_Stop.status = PsychoJS.Status.FINISHED;
-  }
+    }
+
+    //test//doesnt seem like the right place for this
+    if (block_count > 1 && block_count % 2 == 0) {
+        symb = symb_remap;
+        symb_g = symb_g_remap;
+        symb_r = symb_r_remap;
+        //remap = 1;
+    } else {
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
+    }
 
     if (RT_Press_Stop.status === PsychoJS.Status.STARTED) {
       let theseKeys = RT_Press_Stop.getKeys({keyList: ['h', 'u', 'i', 'l'], waitRelease: false});
