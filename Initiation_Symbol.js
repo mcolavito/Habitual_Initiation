@@ -3717,11 +3717,9 @@ function Creat_StimSeqRoutineBegin(trials) {
             symb_g = symb_g_remap;
             symb_r = symb_r_remap;
         } else {
-            if (grp_swap === 1) {
-                symb = symb_map;
-                symb_g = symb_g_map;
-                symb_r = symb_r_map;
-            }
+            symb = symb_map;
+            symb_g = symb_g_map;
+            symb_r = symb_r_map;
         }
     }
 
