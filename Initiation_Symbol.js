@@ -3716,6 +3716,7 @@ function Creat_StimSeqRoutineBegin(trials) {
             symb = symb_remap;
             symb_g = symb_g_remap;
             symb_r = symb_r_remap;
+        }
     }
 
     // keep track of which components have finished
