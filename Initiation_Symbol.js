@@ -1,4 +1,4 @@
-﻿/**************************
+/**************************
  * Initiation_Symbol Test *
  **************************/
 
@@ -198,20 +198,20 @@ var tr_block_hand = 4;
 var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
-var num_trials = 10;
+var num_trials = 96;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 0;
-var rt_hand_yes = 0;
-var cr_old_yes = 0;
-var cr_new_yes = 0;
+var tr_hand_yes = 1;
+var rt_hand_yes = 1;
+var cr_old_yes = 1;
+var cr_new_yes = 1;
 var rt_yes = 1;
-var tr_old_pre_yes = 0;
-var tr_old_post_yes = 0;
-var tr_new_yes = 0;
+var tr_old_pre_yes = 1;
+var tr_old_post_yes = 1;
+var tr_new_yes = 1;
 //////////////////////////////////////
 
 var pre = 0;
@@ -2202,7 +2202,6 @@ function RT_IterLoopBegin(thisScheduler) {
     thisScheduler.add(Pre_TrialRoutineBegin(snapshot));
     thisScheduler.add(Pre_TrialRoutineEachFrame(snapshot));
     thisScheduler.add(Pre_TrialRoutineEnd(snapshot));
-    //edit here//
     thisScheduler.add(RT_Enter_TrialRoutineBegin(snapshot));
     thisScheduler.add(RT_Enter_TrialRoutineEachFrame(snapshot));
     thisScheduler.add(RT_Enter_TrialRoutineEnd(snapshot));
@@ -3084,10 +3083,10 @@ function Init_StimRoutineBegin(trials) {
         y.push(StimList[i]["Y_pos"]);
     }
 
-    symb_map_rnd = Math.floor(rng2 * symb_perm.length) // random integer between 0 and num_symb - 1
+    symb_map_rnd = Math.floor(rng2 * symb_perm.length) // random interger between 0 and num_symb - 1
     symb_map_ind = symb_perm[symb_map_rnd];
 
-    remap_pair_rnd = Math.floor(rng3 * remap_pairs.length) //random integer to assign pairs
+    remap_pair_rnd = Math.floor(rng3 * remap_pairs.length)
     remap_pair_1 = remap_pairs[remap_pair_rnd];
     for (i = 0, _pj_a = 4; (i < _pj_a); i += 1) {
         if  (!(remap_pair_1.includes(i))) {
@@ -6372,7 +6371,9 @@ function Instr_RTRoutineBegin(trials) {
             block_count = 5;
         }
     }
-
+    symb = symb_map;
+    symb_g = symb_g_map;
+    symb_r = symb_r_map;
 
     // keep track of which components have finished
     Instr_RTComponents = [];
@@ -6827,19 +6828,7 @@ function RT_Enter_Trial_StopRoutineEachFrame(trials) {
     frameRemains = 0.0 + stop_tol - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (RT_Press_Stop.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       RT_Press_Stop.status = PsychoJS.Status.FINISHED;
-    }
-
-    //test//doesnt seem like the right place for this
-    if (block_count > 1 && block_count % 2 == 0) {
-        symb = symb_remap;
-        symb_g = symb_g_remap;
-        symb_r = symb_r_remap;
-        //remap = 1;
-    } else {
-        symb = symb_map;
-        symb_g = symb_g_map;
-        symb_r = symb_r_map;
-    }
+  }
 
     if (RT_Press_Stop.status === PsychoJS.Status.STARTED) {
       let theseKeys = RT_Press_Stop.getKeys({keyList: ['h', 'u', 'i', 'l'], waitRelease: false});
