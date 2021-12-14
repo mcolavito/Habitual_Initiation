@@ -3711,6 +3711,16 @@ function Creat_StimSeqRoutineBegin(trials) {
             count = (count + 1);
         }
         //here//
+        if ((block_count - 1) % 2 == 0) {
+            remap = 1;
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        } else {
+            symb = symb_map;
+            symb_g = symb_g_map;
+            symb_r = symb_r_map;
+        }
 
     }
 
@@ -6372,17 +6382,6 @@ function Instr_RTRoutineBegin(trials) {
         if ((session === 2)) {
             block_count = 5;
         }
-    }
-    //test here//
-    if ((block_count - 1) % 2 == 0) {
-        remap = 1;
-        symb = symb_remap;
-        symb_g = symb_g_remap;
-        symb_r = symb_r_remap;
-    } else {
-        symb = symb_map;
-        symb_g = symb_g_map;
-        symb_r = symb_r_map;
     }
 
     // keep track of which components have finished
