@@ -3710,6 +3710,19 @@ function Creat_StimSeqRoutineBegin(trials) {
             }
             count = (count + 1);
         }
+
+        if (block_count >== 1 && block_count % 2 === 0) {
+            remap = 1;
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        } else {
+            if (grp_swap === 1) {
+                symb = symb_map;
+                symb_g = symb_g_map;
+                symb_r = symb_r_map;
+            }
+        }
     }
 
     // keep track of which components have finished
