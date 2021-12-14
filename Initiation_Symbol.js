@@ -3710,7 +3710,7 @@ function Creat_StimSeqRoutineBegin(trials) {
             }
             count = (count + 1);
         }
-
+        //here//
         if (block_count >== 1 && block_count % 2 === 0) {
             remap = 1;
             symb = symb_remap;
