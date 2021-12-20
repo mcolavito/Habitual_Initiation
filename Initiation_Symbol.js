@@ -6380,12 +6380,12 @@ function Instr_RTRoutineBegin(trials) {
         }
     }
 
-    if (grp_stop === 1) {
+    if (block_count % 2 === 1) {
         symb = symb_map;
         symb_g = symb_g_map;
         symb_r = symb_r_map;
     } else {
-        if (grp_swap === 1) {
+        if (block_count % 2 === 0) {
             symb = symb_remap;
             symb_g = symb_g_remap;
             symb_r = symb_r_remap;
