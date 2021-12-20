@@ -6390,6 +6390,7 @@ function Instr_RTRoutineBegin(trials) {
             symb_g = symb_g_remap;
             symb_r = symb_r_remap;
         }
+    }
 
     // keep track of which components have finished
     Instr_RTComponents = [];
