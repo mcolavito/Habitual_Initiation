@@ -6380,7 +6380,7 @@ function Instr_RTRoutineBegin(trials) {
         }
     }
 
-    if (block_count % 2 === 1) {
+    if (block_count === 0 || block_count % 2 === 1) {
         symb = symb_map;
         symb_g = symb_g_map;
         symb_r = symb_r_map;
