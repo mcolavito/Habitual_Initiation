@@ -3711,12 +3711,12 @@ function Creat_StimSeqRoutineBegin(trials) {
             count = (count + 1);
         }
         //here//
-        if ((block_count - 1) % 2 == 0) {
-            remap = 1;
+        //if ((block_count - 1) % 2 == 0) {
+        //    remap = 1;
         //    symb = symb_remap;
         //    symb_g = symb_g_remap;
         //    symb_r = symb_r_remap;
-        }
+        //}
 
     }
 
@@ -6371,7 +6371,7 @@ function Instr_RTRoutineBegin(trials) {
     _Instr_RT_Press_allKeys = [];
     block_type = "RT";
     stim_type = "Symb";
-    remap = 0;
+    remap = 1;
     if ((session === 1)) {
         block_count = 0;
     } else {
@@ -6379,6 +6379,17 @@ function Instr_RTRoutineBegin(trials) {
             block_count = 5;
         }
     }
+
+    if (grp_stop === 1) {
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
+    } else {
+        if (grp_swap === 1) {
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        }
 
     // keep track of which components have finished
     Instr_RTComponents = [];
