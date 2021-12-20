@@ -3717,6 +3717,17 @@ function Creat_StimSeqRoutineBegin(trials) {
         //    symb_g = symb_g_remap;
         //    symb_r = symb_r_remap;
         //}
+        if (block_count === 0 || block_count % 2 === 1) {
+            symb = symb_map;
+            symb_g = symb_g_map;
+            symb_r = symb_r_map;
+        } else {
+            if (block_count % 2 === 0) {
+                symb = symb_remap;
+                symb_g = symb_g_remap;
+                symb_r = symb_r_remap;
+            }
+        }
 
     }
 
@@ -6380,7 +6391,7 @@ function Instr_RTRoutineBegin(trials) {
         }
     }
 
-    if (block_count === 0 || block_count % 2 === 1) {
+    /*if (block_count === 0 || block_count % 2 === 1) {
         symb = symb_map;
         symb_g = symb_g_map;
         symb_r = symb_r_map;
@@ -6390,7 +6401,7 @@ function Instr_RTRoutineBegin(trials) {
             symb_g = symb_g_remap;
             symb_r = symb_r_remap;
         }
-    }
+    }*/
 
     // keep track of which components have finished
     Instr_RTComponents = [];
