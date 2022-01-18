@@ -3695,15 +3695,15 @@ function Creat_StimSeqRoutineBegin(trials) {
         }
     }
 
-    if ((block_type === "RT")) {
-        count = 0;
-        if (count >= 2 && count % 2 == 0) {
-            symb = symb_remap;
-            symb_g = symb_g_remap;
-            symb_r = symb_r_remap;
-        }
-        count = (count + 1);
-    }
+    // if ((block_type === "RT")) {
+    //     count = 0;
+    //     if (count >= 2 && count % 2 == 0) {
+    //         symb = symb_remap;
+    //         symb_g = symb_g_remap;
+    //         symb_r = symb_r_remap;
+    //     }
+    //     count = (count + 1);
+    // }
 
     if (((block_type !== "CR") && (stim_type === "Symb"))) {
         count = 0;
@@ -6373,7 +6373,7 @@ function Instr_RTRoutineBegin(trials) {
     _Instr_RT_Press_allKeys = [];
     block_type = "RT";
     stim_type = "Symb";
-    remap = 0;
+    remap = 1;
     if ((session === 1)) {
         block_count = 0;
     } else {
@@ -6381,6 +6381,19 @@ function Instr_RTRoutineBegin(trials) {
             block_count = 5;
         }
     }
+
+    if (block_count < 2) {
+        symb = symb_map;
+        symb_g = symb_g_map;
+        symb_r = symb_r_map;
+    } else {
+        if (block_count % 2 == 0) {
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        }
+    }
+
     symb = symb_map;
     symb_g = symb_g_map;
     symb_r = symb_r_map;
