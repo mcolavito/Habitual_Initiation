@@ -3717,7 +3717,7 @@ function Creat_StimSeqRoutineBegin(trials) {
         //    symb_g = symb_g_remap;
         //    symb_r = symb_r_remap;
         //}
-        if (block_count === 0 || block_count % 2 === 1) {
+        if (block_count === 0) {
             symb = symb_map;
             symb_g = symb_g_map;
             symb_r = symb_r_map;
