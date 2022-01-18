@@ -3695,6 +3695,16 @@ function Creat_StimSeqRoutineBegin(trials) {
         }
     }
 
+    if ((block_type === "RT")) {
+        count = 0;
+        if (count >= 2 && count % 2 == 0) {
+            symb = symb_remap;
+            symb_g = symb_g_remap;
+            symb_r = symb_r_remap;
+        }
+        count = (count + 1);
+    }
+
     if (((block_type !== "CR") && (stim_type === "Symb"))) {
         count = 0;
         while ((count < (num_trials / 16))) {
