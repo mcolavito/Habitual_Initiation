@@ -24,7 +24,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'Initiation_Symbol';  // from the Builder filename that created this script
+let expName = 'Initiation_Symbol 3.0';  // from the Builder filename that created this script
 // let expInfo = {'participant': '', 'session': ''};
 let expInfo = {'participant': ''};
 
@@ -6382,7 +6382,7 @@ function Instr_RTRoutineBegin(trials) {
         }
     }
 
-    if (block_count < 2) {
+    if (block_count < 2) { //to correct move this part out of if statement
         symb = symb_map;
         symb_g = symb_g_map;
         symb_r = symb_r_map;
@@ -6393,10 +6393,6 @@ function Instr_RTRoutineBegin(trials) {
             symb_r = symb_r_remap;
         }
     }
-
-    symb = symb_map;
-    symb_g = symb_g_map;
-    symb_r = symb_r_map;
 
     // keep track of which components have finished
     Instr_RTComponents = [];
