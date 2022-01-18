@@ -24,7 +24,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'Initiation_Symbol';  // from the Builder filename that created this script
+let expName = 'Initiation_Symbol 2.0';  // from the Builder filename that created this script
 // let expInfo = {'participant': '', 'session': ''};
 let expInfo = {'participant': ''};
 
