@@ -24,7 +24,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'Initiation_Symbol 2.01';  // from the Builder filename that created this script
+let expName = 'Initiation_Symbol';  // from the Builder filename that created this script
 // let expInfo = {'participant': '', 'session': ''};
 let expInfo = {'participant': ''};
 
@@ -198,20 +198,20 @@ var tr_block_hand = 4;
 var num_trials_hand = 96;
 var num_trials_cr = 2000;
 var num_criterion = 5;
-var num_trials = 10;
+var num_trials = 96;
 var rt_block = 12;
 var tr_block_old = 2;
 var tr_block_new_swap = 0;
 var tr_block_new_stop = 0;
 
-var tr_hand_yes = 0;
-var rt_hand_yes = 0;
-var cr_old_yes = 0;
-var cr_new_yes = 0;
+var tr_hand_yes = 1;
+var rt_hand_yes = 1;
+var cr_old_yes = 1;
+var cr_new_yes = 1;
 var rt_yes = 1;
-var tr_old_pre_yes = 0;
-var tr_old_post_yes = 0;
-var tr_new_yes = 0;
+var tr_old_pre_yes = 1;
+var tr_old_post_yes = 1;
+var tr_new_yes = 1;
 //////////////////////////////////////
 
 var pre = 0;
@@ -3710,26 +3710,6 @@ function Creat_StimSeqRoutineBegin(trials) {
             }
             count = (count + 1);
         }
-        //here//
-        //if ((block_count - 1) % 2 == 0) {
-        //    remap = 1;
-        //    symb = symb_remap;
-        //    symb_g = symb_g_remap;
-        //    symb_r = symb_r_remap;
-        //}
-        if (block_count > 0) {
-            symb = symb_map;
-            symb_g = symb_g_map;
-            symb_r = symb_r_map;
-        // } else {
-        //     //if (block_count % 2 === 0) {
-        //         remap = 1;
-        //         symb = symb_remap;
-        //         symb_g = symb_g_remap;
-        //         symb_r = symb_r_remap;
-        //     //}
-        }
-
     }
 
     // keep track of which components have finished
@@ -6383,7 +6363,7 @@ function Instr_RTRoutineBegin(trials) {
     _Instr_RT_Press_allKeys = [];
     block_type = "RT";
     stim_type = "Symb";
-    remap = 1;
+    remap = 0;
     if ((session === 1)) {
         block_count = 0;
     } else {
@@ -6391,18 +6371,9 @@ function Instr_RTRoutineBegin(trials) {
             block_count = 5;
         }
     }
-
-    /*if (block_count === 0 || block_count % 2 === 1) {
-        symb = symb_map;
-        symb_g = symb_g_map;
-        symb_r = symb_r_map;
-    } else {
-        if (block_count % 2 === 0) {
-            symb = symb_remap;
-            symb_g = symb_g_remap;
-            symb_r = symb_r_remap;
-        }
-    }*/
+    symb = symb_map;
+    symb_g = symb_g_map;
+    symb_r = symb_r_map;
 
     // keep track of which components have finished
     Instr_RTComponents = [];
